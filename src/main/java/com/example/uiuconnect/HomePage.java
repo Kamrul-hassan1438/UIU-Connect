@@ -2,6 +2,7 @@ package com.example.uiuconnect;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 
 import java.io.IOException;
@@ -28,8 +29,8 @@ public class HomePage {
     }
 
     @FXML
-    void findFriendsAction(ActionEvent event) {
-
+    void findFriendsAction(ActionEvent event) throws IOException{
+        SceneChanger find = new SceneChanger("FindFriendsPanel.fxml", event);
     }
 
     @FXML
@@ -43,7 +44,7 @@ public class HomePage {
     }
 
     @FXML
-    void myProfileAction(ActionEvent event) {
-
+    void myProfileAction(ActionEvent event) throws IOException{
+        SceneChanger myProfile = new SceneChanger("MyProfilePanel.fxml", event);
     }
 }

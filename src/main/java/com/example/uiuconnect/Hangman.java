@@ -129,7 +129,7 @@ public class Hangman {
 
     @FXML
     public void setBack(ActionEvent event) throws IOException {
-        SceneChanger setBack= new SceneChanger("GameZonePanel.fxml",event);
+        SceneChanger setBack= new SceneChanger("GameZone.fxml",event);
     }
 
 }

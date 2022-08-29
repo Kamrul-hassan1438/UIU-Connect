@@ -67,6 +67,7 @@ public class SignUpPanel {
                         fileOutputStream.close();
                         objectOutputStream.close();
                         labelAction.setText("New Account created");
+                        SceneChanger sceneChanger = new SceneChanger("WelcomePanel.fxml", event);
 
                     }
                     else {
@@ -96,6 +97,7 @@ public class SignUpPanel {
                         fileOutputStream.close();
                         objectOutputStream.close();
                         labelAction.setText("New Account created");
+                        SceneChanger sceneChanger = new SceneChanger("WelcomePanel.fxml", event);
                     }
                     else {
                         labelAction.setText("Password didn't match");

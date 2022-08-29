@@ -57,8 +57,10 @@ public class StudentLoginPanel {
         try {
             String Id = institutionIDChecker.getText();
             String Pass = passwordChecker.getText();
+
             FileInputStream fileInputStream = new FileInputStream(new File("src/Students_Portal.txt"));
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            System.out.println("outside");
             while (objectInputStream.available() != -1) {
                 My_Profile my_profile = (My_Profile) objectInputStream.readObject();
                 System.out.println(my_profile.name+"   "+my_profile.Password);
