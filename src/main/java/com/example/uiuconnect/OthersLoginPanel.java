@@ -8,7 +8,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -51,33 +53,33 @@ public class OthersLoginPanel {
 
     @FXML
     void loginAction(ActionEvent event) throws IOException{
-        String useremail= emailChecker.getText();
-        String Pass=passwordChecker.getText();
-        Scanner sc= new Scanner(new File("src/Others_Info.txt"));
-        HashMap<String,String > map = new HashMap<>();
+        try {
+            String useremail= emailChecker.getText();
+            String Pass=passwordChecker.getText();
+            FileInputStream fileInputStream= new FileInputStream(new File("src/Others_Portal.txt"));
+            ObjectInputStream objectInputStream= new ObjectInputStream(fileInputStream);
 
-        while (sc.hasNext())
-        {
-            String temp= sc.nextLine();
-            String [] ar=temp.split("::");
-            map.put(ar[0],ar[1]);
-            if (map.containsKey(useremail))
+            System.out.println(useremail);
+            while (objectInputStream.available()!=-1)
             {
-                String pas;
-                pas=map.get(useremail);
-                if (Pass.equals(pas)){
-                    SceneChanger home_scene = new SceneChanger("HomePage.fxml", event);
+                My_Profile my_profile = (My_Profile)objectInputStream.readObject();
+                if (my_profile.Mail.equals(useremail) && my_profile.Password.equals(Pass)){
+                    SceneChanger home_scene = new SceneChanger("HomePage.fxml",event);
+                    break;
                 }
                 else {
-                    warningLabel.setText("Invalid email or Password");
+                    warningLabel.setText("Invalid");
                 }
-                break;
             }
-            else {
-                warningLabel.setText("Invalid email or Password");
-            }
+            fileInputStream.close();
+            objectInputStream.close();
         }
-        sc.close();
+        catch (IOException m)
+        {
+
+        } catch (ClassNotFoundException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
 }

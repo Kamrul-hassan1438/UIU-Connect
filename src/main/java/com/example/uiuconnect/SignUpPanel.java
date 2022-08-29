@@ -4,9 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class SignUpPanel {
     @FXML
@@ -56,19 +54,20 @@ public class SignUpPanel {
         if (studentCheck.isSelected())
         {
             try {
-                FileWriter fileWriter= new FileWriter("src/Students_Portal.txt",true);
-                BufferedWriter writer= new BufferedWriter(fileWriter);
+                FileOutputStream fileOutputStream= new FileOutputStream("src/Students_Portal.txt",true);
+                ObjectOutputStream objectOutputStream= new ObjectOutputStream(fileOutputStream);
                 String id= institutionIDChecker.getText();
                 int a= id.length();
                 if (a==9 && emailPicker.getText()!=null && namepicker.getText()!=null && pnPicker.getText()!=null && bloodGroupPicker.getText()!=null && departmentPicker.getText()!=null && batchPicker.getText()!=null)
                 {
-                    if(passwordcreate.getText().equals(cpassword.getText()))
+                    if (passwordcreate.getText()!=null&&(passwordcreate.getText().equals(passwordcreate.getText())))
                     {
-                        writer.write("\n"+id+"::"+passwordcreate.getText()+"::"+namepicker.getText()+"::"+emailPicker.getText()+"::"+pnPicker.getText()+"::"+bloodGroupPicker.getText()
-                                +"::"+departmentPicker.getText()+"::"+batchPicker.getText());
-                        writer.close();
+                        My_Profile my_profile= new My_Profile(namepicker.getText(),institutionIDChecker.getText(),passwordcreate.getText(),emailPicker.getText(),pnPicker.getText(),bloodGroupPicker.getText(),departmentPicker.getText(),batchPicker.getText());
+                        objectOutputStream.writeObject(my_profile);
+                        fileOutputStream.close();
+                        objectOutputStream.close();
                         labelAction.setText("New Account created");
-                        SceneChanger back = new SceneChanger("WelcomePanel.fxml", event);
+
                     }
                     else {
                         labelAction.setText("Passwords didn't match");
@@ -78,28 +77,35 @@ public class SignUpPanel {
                     labelAction.setText("Institute ID must be in 9 digits");
                 }
             }
-            catch (IOException exc) {}
+            catch (IOException exc) {
+            }
         }
         else if(othersChecker.isSelected())
         {
+
+
             try {
-                FileWriter fileWriter= new FileWriter("src/Others_Portal.txt",true);
-                BufferedWriter writer= new BufferedWriter(fileWriter);
-                if (emailPicker.getText()!=null && namepicker.getText()!=null && pnPicker.getText()!=null && bloodGroupPicker.getText()!=null )
+                FileOutputStream fileOutputStream= new FileOutputStream("src/Others_Portal.txt",true);
+                ObjectOutputStream objectOutputStream= new ObjectOutputStream(fileOutputStream);
+                if (emailPicker.getText()!=null && namepicker.getText()!=null && pnPicker.getText()!=null && batchPicker.getText()!=null )
                 {
-                    if (passwordcreate.getText()!=null&&(passwordcreate.getText().equals(cpassword.getText())))
+                    if (passwordcreate.getText()!=null&&(passwordcreate.getText().equals(passwordcreate.getText())))
                     {
-                        writer.write("\n"+emailPicker.getText()+"::"+passwordcreate.getText()+"::"+namepicker.getText()+"::"+pnPicker.getText()+"::"+bloodGroupPicker.getText());
-                        writer.close();
+                        My_Profile my_profile= new My_Profile(namepicker.getText(),namepicker.getText(),emailPicker.getText(),pnPicker.getText(),bloodGroupPicker.getText());
+                        objectOutputStream.writeObject(my_profile);
+                        fileOutputStream.close();
+                        objectOutputStream.close();
                         labelAction.setText("New Account created");
                     }
                     else {
                         labelAction.setText("Password didn't match");
                     }
+
                 }
-                writer.close();
             }
-            catch (IOException exc) {}
+            catch (IOException exc) {
+            }
         }
-    }
+
+        }
 }
