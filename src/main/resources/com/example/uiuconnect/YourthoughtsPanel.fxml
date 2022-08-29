@@ -33,8 +33,8 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="133.0" prefWidth="498.0" spacing="10.0">
                <children>
-                  <TextField prefHeight="74.0" prefWidth="240.0" promptText="Write Your Post" />
-                  <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchButtonAction" stylesheets="@ButtonEdit1.css" text="Post">
+                  <TextField fx:id="postTextField" onAction="#posttextFieldAction" prefHeight="74.0" prefWidth="240.0" promptText="Write Your Post" />
+                  <Button fx:id="PostButton" mnemonicParsing="false" onAction="#PostButtonAction" stylesheets="@ButtonEdit1.css" text="Post">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -46,20 +46,20 @@
       <HBox alignment="CENTER" layoutX="74.0" layoutY="232.0" prefHeight="35.0" prefWidth="457.0" spacing="10.0">
          <children>
             <Line endX="-65.19998168945312" endY="1.52587890625E-5" startX="-100.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" />
+            <Line endX="-65.19998168945312" endY="1.52587890625E-5" startX="-100.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" />
             <Line endX="-65.19998168945312" endY="1.52587890625E-5" startX="-100.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" />
+            <Line endX="-65.19998168945312" endY="1.52587890625E-5" startX="-100.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" />
             <Line endX="-65.19998168945312" endY="1.52587890625E-5" startX="-100.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" />
+            <Line endX="-65.19998168945312" endY="1.52587890625E-5" startX="-100.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" />
             <Line endX="-65.19998168945312" endY="1.52587890625E-5" startX="-100.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" />
+            <Line endX="-65.19998168945312" endY="1.52587890625E-5" startX="-100.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" />
             <Line endX="-65.19998168945312" endY="1.52587890625E-5" startX="-100.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" />
-            <Line endX="-65.19998168945312" endY="1.52587890625E-5" startX="-100.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" />
-            <Line endX="-65.19998168945312" endY="1.52587890625E-5" startX="-100.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" />
-            <Line endX="-65.19998168945312" endY="1.52587890625E-5" startX="-100.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" />
-            <Line endX="-65.19998168945312" endY="1.52587890625E-5" startX="-100.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" />
-            <Line endX="-65.19998168945312" endY="1.52587890625E-5" startX="-100.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" />
+            <Line endX="-65.19998168945312" endY="1.52587890625E-5" startX="-100.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" />
          </children>
       </HBox>
       <HBox layoutX="74.0" layoutY="267.0" prefHeight="100.0" prefWidth="550.0">
          <children>
-            <TextArea prefHeight="100.0" prefWidth="390.0" />
+            <TextArea fx:id="postShow" prefHeight="100.0" prefWidth="390.0" />
             <VBox alignment="CENTER" prefHeight="100.0" prefWidth="61.0" spacing="10.0">
                <children>
                   <Label text="React">
