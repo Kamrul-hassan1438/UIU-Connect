@@ -21,7 +21,7 @@
             <HBox alignment="CENTER" prefHeight="4.0" prefWidth="566.0" spacing="10.0">
                <children>
                   <TextField prefHeight="26.0" prefWidth="240.0" promptText="Search" />
-                  <Button mnemonicParsing="false" stylesheets="@ButtonEdit1.css" text="Search">
+                  <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchButtonAction" stylesheets="@ButtonEdit1.css" text="Search">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -30,7 +30,7 @@
             </HBox>
          </children>
       </VBox>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" stylesheets="@ButtonEdit1.css" text="&lt;" textAlignment="CENTER">
+      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonAction" stylesheets="@ButtonEdit1.css" text="&lt;" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
