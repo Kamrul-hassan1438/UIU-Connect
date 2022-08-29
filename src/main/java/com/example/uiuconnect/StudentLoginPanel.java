@@ -63,6 +63,7 @@ public class StudentLoginPanel {
                 My_Profile my_profile = (My_Profile) objectInputStream.readObject();
                 System.out.println(my_profile.name+"   "+my_profile.Password);
                 if (my_profile.Password.equals(Pass) && my_profile.ID.equals(Id)) {
+                    System.out.println("Inside"+my_profile.name+"  "+my_profile.Password);
                     SceneChanger home_scene = new SceneChanger("HomePage.fxml",event);
                     break;
                 } else {
