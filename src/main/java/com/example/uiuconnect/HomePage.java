@@ -23,8 +23,8 @@ public class HomePage {
     private Button myProfileButton;
 
     @FXML
-    void chitchatAction(ActionEvent event) {
-
+    void chitchatAction(ActionEvent event) throws IOException{
+        SceneChanger chitchat = new SceneChanger("ChitChatPanel.fxml", event);
     }
 
     @FXML
@@ -33,8 +33,8 @@ public class HomePage {
     }
 
     @FXML
-    void gameZoneAction(ActionEvent event) {
-
+    void gameZoneAction(ActionEvent event) throws IOException{
+        SceneChanger gamezone = new SceneChanger("GameZonePanel.fxml", event);
     }
 
     @FXML

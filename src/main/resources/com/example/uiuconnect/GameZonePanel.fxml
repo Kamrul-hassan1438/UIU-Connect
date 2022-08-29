@@ -1,14 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.uiuconnect.GameZonePanel"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-image: STAR;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uiuconnect.GameZonePanel">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="708.0" layoutX="-4.0" opacity="0.8" pickOnBounds="true">
+         <image>
+            <Image url="@../../../2488356.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="256.0" layoutY="14.0" text="Game Zone">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5113636435884418" radius="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.519801139831543" green="0.4101754426956177" blue="0.6631578803062439" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.75789475440979" green="0.1347368359565735" blue="0.1347368359565735" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="218.0" layoutY="68.0" text="play, score and share it with your friends">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5113636435884418" radius="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.519801139831543" green="0.4101754426956177" blue="0.6631578803062439" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.75789475440979" green="0.1347368359565735" blue="0.1347368359565735" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <HBox layoutX="53.0" layoutY="170.0" prefHeight="122.0" prefWidth="594.0" spacing="15.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="112.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../hangman.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="hangmanGameButton" mnemonicParsing="false" onAction="#hangmanGameAction" stylesheets="@ButtonEdit2.css" text="Hangman" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" stylesheets="@ButtonEdit2.css">
+               <children>
+                  <ImageView fitHeight="108.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../snake.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="snakeGameButton" mnemonicParsing="false" onAction="#snakeGameAction" text="Snake" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button fx:id="exitButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#exitButtonAction" stylesheets="@ButtonEdit2.css" text="EXIT">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5113636435884418" radius="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.519801139831543" green="0.4101754426956177" blue="0.6631578803062439" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Button>
+   </children>
 </AnchorPane>
