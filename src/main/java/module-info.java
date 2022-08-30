@@ -5,4 +5,6 @@ module com.example.uiuconnect {
 
     opens com.example.uiuconnect to javafx.fxml;
     exports com.example.uiuconnect;
+    exports Snake;
+    opens Snake to javafx.fxml;
 }

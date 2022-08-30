@@ -12,29 +12,34 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="570.0" prefWidth="705.0" style="-fx-background-color: F8C28E;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uiuconnect.Hangman">
+<AnchorPane onKeyPressed="#check" prefHeight="570.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uiuconnect.Hangman">
     <children>
-        <Rectangle fx:id="r1" arcHeight="5.0" arcWidth="5.0" fill="#b7846f" height="42.0" layoutX="29.0" layoutY="391.0" stroke="BLACK" strokeType="INSIDE" width="164.0" />
-        <Rectangle fx:id="r2" arcHeight="5.0" arcWidth="5.0" fill="#d4d7d9" height="256.0" layoutX="41.0" layoutY="156.0" stroke="BLACK" strokeType="INSIDE" width="14.0" />
-        <Rectangle fx:id="r3" arcHeight="5.0" arcWidth="5.0" fill="#d4d7d9" height="9.0" layoutX="29.0" layoutY="424.0" stroke="BLACK" strokeType="INSIDE" width="164.0" />
-        <Rectangle fx:id="r4" arcHeight="5.0" arcWidth="5.0" fill="#bc7e65" height="27.0" layoutX="29.0" layoutY="138.0" stroke="BLACK" strokeType="INSIDE" width="164.0" />
-        <Rectangle fx:id="r5" arcHeight="5.0" arcWidth="5.0" fill="#d4d7d9" height="9.0" layoutX="29.0" layoutY="161.0" stroke="BLACK" strokeType="INSIDE" width="164.0" />
-        <Rectangle fx:id="r6" arcHeight="5.0" arcWidth="5.0" fill="#d4d7d9" height="42.0" layoutX="159.0" layoutY="158.0" stroke="BLACK" strokeType="INSIDE" width="8.0" />
-        <Circle fx:id="c1" fill="#8ea1b4" layoutX="164.0" layoutY="215.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
-        <Circle fx:id="c2" fill="#b2a98d" layoutX="159.0" layoutY="208.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
-        <Circle fx:id="c3" fill="#b2a38d" layoutX="171.0" layoutY="208.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
-        <QuadCurve fx:id="curve1" controlX="-24.79998779296875" controlY="-30.199996948242188" endX="-12.0" endY="-46.19999694824219" fill="#ae9986" layoutX="191.0" layoutY="261.0" startX="-43.20001220703125" startY="-46.19999694824219" stroke="BLACK" strokeType="INSIDE" />
-        <Rectangle fx:id="r7" arcHeight="5.0" arcWidth="5.0" fill="#9cb5cc" height="57.0" layoutX="139.0" layoutY="236.0" stroke="BLACK" strokeType="INSIDE" width="49.0" />
-        <Line fx:id="l1" endX="44.0" endY="26.4000244140625" layoutX="95.0" layoutY="223.0" startX="21.399993896484375" startY="56.0" />
-        <Line fx:id="l2" endX="83.0" endY="16.4000244140625" layoutX="105.0" layoutY="233.0" startX="107.4000244140625" startY="44.4000244140625" />
-        <Rectangle fx:id="r8" arcHeight="5.0" arcWidth="5.0" fill="#b3cadf" height="42.0" layoutX="148.0" layoutY="293.0" stroke="BLACK" strokeType="INSIDE" width="14.0" />
-        <Rectangle fx:id="r9" arcHeight="5.0" arcWidth="5.0" fill="#b3cadf" height="42.0" layoutX="168.0" layoutY="293.0" stroke="BLACK" strokeType="INSIDE" width="14.0" />
-        <ImageView fitHeight="98.0" fitWidth="111.0" layoutX="613.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="570.0" fitWidth="851.0" layoutX="-106.0" onKeyPressed="#check" opacity="0.26" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../UIU-Logo.png" />
+                <Image url="@../../../d67.jpg" />
             </image>
         </ImageView>
-        <Label fx:id="la1" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="276.0" layoutY="66.0" prefHeight="57.0" prefWidth="419.0" textAlignment="CENTER" AnchorPane.bottomAnchor="446.79999999999995" AnchorPane.leftAnchor="276.0" AnchorPane.rightAnchor="56.19999999999999" AnchorPane.topAnchor="66.0">
+        <Rectangle fx:id="r1" arcHeight="5.0" arcWidth="5.0" fill="#b7846f" height="42.0" layoutX="25.0" layoutY="505.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="164.0" />
+        <Rectangle fx:id="r2" arcHeight="5.0" arcWidth="5.0" fill="#d4d7d9" height="256.0" layoutX="37.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="14.0" />
+        <Rectangle fx:id="r3" arcHeight="5.0" arcWidth="5.0" fill="#d4d7d9" height="9.0" layoutX="25.0" layoutY="538.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="164.0" />
+        <Rectangle fx:id="r4" arcHeight="5.0" arcWidth="5.0" fill="#b7846f" height="27.0" layoutX="25.0" layoutY="252.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="164.0" />
+        <Rectangle fx:id="r5" arcHeight="5.0" arcWidth="5.0" fill="#d4d7d9" height="9.0" layoutX="25.0" layoutY="275.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="164.0" />
+        <Rectangle fx:id="r6" arcHeight="5.0" arcWidth="5.0" fill="#d4d7d9" height="42.0" layoutX="155.0" layoutY="272.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="8.0" />
+        <Circle fx:id="c1" fill="#8ea1b4" layoutX="160.0" layoutY="329.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+        <Circle fx:id="c2" fill="#b2a98d" layoutX="155.0" layoutY="322.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+        <Circle fx:id="c3" fill="#b2a38d" layoutX="167.0" layoutY="322.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+        <QuadCurve fx:id="curve1" controlX="-24.79998779296875" controlY="-30.199996948242188" endX="-12.0" endY="-46.19999694824219" fill="#ae9986" layoutX="187.0" layoutY="375.0" startX="-43.20001220703125" startY="-46.19999694824219" stroke="BLACK" strokeType="INSIDE" visible="false" />
+        <Rectangle fx:id="r7" arcHeight="5.0" arcWidth="5.0" fill="#9cb5cc" height="57.0" layoutX="135.0" layoutY="350.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="49.0" />
+        <Line fx:id="l1" endX="44.0" endY="26.4000244140625" layoutX="91.0" layoutY="337.0" startX="21.399993896484375" startY="56.0" visible="false" />
+        <Line fx:id="l2" endX="83.0" endY="16.4000244140625" layoutX="101.0" layoutY="347.0" startX="107.4000244140625" startY="44.4000244140625" visible="false" />
+        <Rectangle fx:id="r8" arcHeight="5.0" arcWidth="5.0" fill="#b3cadf" height="42.0" layoutX="144.0" layoutY="407.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="14.0" />
+        <Rectangle fx:id="r9" arcHeight="5.0" arcWidth="5.0" fill="#b3cadf" height="42.0" layoutX="164.0" layoutY="407.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="14.0" />
+        <ImageView fitHeight="76.0" fitWidth="74.0" layoutX="677.0" layoutY="496.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../download.png" />
+            </image>
+        </ImageView>
+        <Label fx:id="la1" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="311.0" layoutY="79.0" prefHeight="58.0" prefWidth="42.0" textAlignment="CENTER" AnchorPane.bottomAnchor="434.0" AnchorPane.leftAnchor="311.0" AnchorPane.rightAnchor="398.0" AnchorPane.topAnchor="79.0">
             <opaqueInsets>
                 <Insets />
             </opaqueInsets>
@@ -45,7 +50,7 @@
                 <Font name="System Bold Italic" size="24.0" />
             </font>
         </Label>
-        <Button fx:id="pla" layoutX="54.0" layoutY="475.0" mnemonicParsing="false" onAction="#Play_Action" prefHeight="74.0" prefWidth="122.0" stylesheets="@ButtonEdit1.css" text="Play" textFill="WHITE">
+        <Button fx:id="pla" layoutX="25.0" layoutY="109.0" mnemonicParsing="false" onAction="#Play_Action" prefHeight="74.0" prefWidth="122.0" text="Play" textFill="#d47c7c">
             <padding>
                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
             </padding>
@@ -58,36 +63,87 @@
                 <Font size="24.0" />
             </font>
         </Label>
-        <Button layoutX="337.0" layoutY="317.0" mnemonicParsing="false" onKeyPressed="#check" prefHeight="27.0" prefWidth="26.0" text="A" />
-        <Button layoutX="370.0" layoutY="317.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="B" />
-        <Button layoutX="405.0" layoutY="317.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="C" />
-        <Button layoutX="438.0" layoutY="317.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="D" />
-        <Button layoutX="472.0" layoutY="317.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="E" />
-        <Button layoutX="505.0" layoutY="317.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="F" />
-        <Button layoutX="540.0" layoutY="317.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="G" />
-        <Button layoutX="573.0" layoutY="317.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="H" />
-        <Button layoutX="608.0" layoutY="317.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="I" />
-        <Button layoutX="369.0" layoutY="356.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="J" />
-        <Button layoutX="402.0" layoutY="356.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="K" />
-        <Button layoutX="437.0" layoutY="356.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="L" />
-        <Button layoutX="468.0" layoutY="356.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="31.0" text="M" />
-        <Button layoutX="507.0" layoutY="356.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="N" />
-        <Button layoutX="540.0" layoutY="356.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="O" />
-        <Button layoutX="575.0" layoutY="356.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="P" />
-        <Button layoutX="383.0" layoutY="393.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="Q" />
-        <Button layoutX="416.0" layoutY="393.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="R" />
-        <Button layoutX="454.0" layoutY="393.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="S" />
-        <Button layoutX="487.0" layoutY="393.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="T" />
-        <Button layoutX="521.0" layoutY="393.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="U" />
-        <Button layoutX="554.0" layoutY="393.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="V" />
-        <Button layoutX="430.0" layoutY="433.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="31.0" text="W" />
-        <Button layoutX="468.0" layoutY="433.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="X" />
-        <Button layoutX="504.0" layoutY="433.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="Y" />
-        <Button layoutX="468.0" layoutY="469.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="26.0" text="Z" />
-        <Button fx:id="back" layoutX="11.0" layoutY="14.0" maxWidth="20.0" mnemonicParsing="false" onAction="#setBack" prefHeight="20.0" stylesheets="@ButtonEdit1.css" text="&lt;">
+        <Button fx:id="back" layoutX="11.0" layoutY="14.0" mnemonicParsing="false" onAction="#setBack" text="&lt;">
             <font>
-                <Font name="System Bold" size="18.0" />
+                <Font name="Bodoni MT Black" size="14.0" />
             </font>
         </Button>
+        <Label fx:id="la11" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="354.0" layoutY="80.0" prefHeight="58.0" prefWidth="42.0" textAlignment="CENTER">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <font>
+                <Font name="System Bold Italic" size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="la111" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="396.0" layoutY="80.0" prefHeight="58.0" prefWidth="42.0" textAlignment="CENTER">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <font>
+                <Font name="System Bold Italic" size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="la1111" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="438.0" layoutY="80.0" prefHeight="58.0" prefWidth="42.0" textAlignment="CENTER">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <font>
+                <Font name="System Bold Italic" size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="la11111" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="480.0" layoutY="80.0" prefHeight="58.0" prefWidth="42.0" textAlignment="CENTER">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <font>
+                <Font name="System Bold Italic" size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="la111111" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="526.0" layoutY="80.0" prefHeight="58.0" prefWidth="42.0" textAlignment="CENTER">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <font>
+                <Font name="System Bold Italic" size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="la1111111" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="568.0" layoutY="80.0" prefHeight="58.0" prefWidth="42.0" textAlignment="CENTER">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <font>
+                <Font name="System Bold Italic" size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="la11111111" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="610.0" layoutY="78.0" prefHeight="58.0" prefWidth="42.0" textAlignment="CENTER">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <font>
+                <Font name="System Bold Italic" size="24.0" />
+            </font>
+        </Label>
     </children>
 </AnchorPane>

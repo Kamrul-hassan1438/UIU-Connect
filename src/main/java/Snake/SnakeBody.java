@@ -1,4 +1,4 @@
-package com.example.uiuconnect;
+package Snake;
 import javafx.scene.shape.Circle;
 
 import java.util.ArrayList;

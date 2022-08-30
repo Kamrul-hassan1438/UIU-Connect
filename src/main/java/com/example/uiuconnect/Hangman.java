@@ -55,6 +55,28 @@ public class Hangman {
     @FXML
     private Label la1;
     @FXML
+    private Label la11;
+
+    @FXML
+    private Label la111;
+
+    @FXML
+    private Label la1111;
+
+    @FXML
+    private Label la11111;
+
+    @FXML
+    private Label la111111;
+
+    @FXML
+    private Label la1111111;
+
+    @FXML
+    private Label la11111111;
+
+
+    @FXML
     private Label  la2;
 
     @FXML
@@ -64,72 +86,164 @@ public class Hangman {
     @FXML
     final  int Max=4;
     @FXML
-    final  int Max_2=6;
-    @FXML
     int Count=0;
     @FXML
-    String temp;
+    public char[] word;
+    @FXML
+    public char[] temp_Char;
 
 
     @FXML
     private  void Play_Action()
     {
         try {
-            FileReader fileReader= new FileReader("Hangman_Words");
+            FileReader fileReader= new FileReader("src/Hangman_Words");
             Scanner sc= new Scanner(fileReader);
             ArrayList<String> list= new ArrayList<>();
             int a= new Random().nextInt(200);
-
+            int b;
             while (sc.hasNext())
             {
                 list.add(sc.nextLine());
             }
             sc.close();
-            temp= list.get(a);
+            String temp = "BABBBAAA";
+            //list.get(a).toUpperCase();
+            temp_Char= temp.toCharArray();
+            word= new char[temp.length()];
+            la1.setText(temp_Char[0]+"");
             System.out.println(temp);
         }
         catch (IOException e)
         {
-
+            System.out.println("ERRor");
         }
         pla.setVisible(false);
     }
+
+
     @FXML
-    private void check(KeyEvent event) throws  InterruptedException
-    {
-        System.out.println("CLICKED");
-        if (event.getCode()== KeyCode.A )
+    private void check(KeyEvent event) {
+        word = la1.getText().toCharArray();
+        Count++;
+
+        if(Count<2)
         {
-            ++Count;
-            if (temp.length()<=7 && Count>Max)
-            {
-                if (la1.getText().equals(temp))
+            r1.setVisible(true);
+            r2.setVisible(true);
+            r3.setVisible(true);
+            r4.setVisible(true);
+            r5.setVisible(true);
+            r6.setVisible(true);
+        }
+
+        else if (Count<3)
+        {
+            c1.setVisible(true);
+            c2.setVisible(true);
+            c3.setVisible(true);
+            curve1.setVisible(true);
+        }
+        else if (Count<4)
+        {
+            r7.setVisible(true);
+            l1.setVisible(true);
+            l2.setVisible(true);
+        }
+        else if(Count<5)
+        {
+            r8.setVisible(true);
+            r9.setVisible(true);
+        }
+        else {
+            System.out.println("game over");
+        }
+
+
+        if (Count<5) {
+            if ((event.getCode() == KeyCode.A)) {
+                System.out.println("A Clicked");
+
+                for (int i= 0; i<temp_Char.length; i++)
                 {
-                    la2.setText("YOU WON");
+                    if ('A'==temp_Char[i])
+                    {
+                    }
                 }
-                else {
-                    la2.setText("LOSE");
-                }
-                pla.setVisible(true);
-            }
-            else {
-                la1.setText(la1.getText()+"A");
-            }
-            System.out.println("CLICKED2");
+                System.out.println(word);
 
+                // String temp2=String.valueOf(word);
+                // System.out.println(temp2);
+                la1.setText(word+"");
+            } else if ((event.getCode() == KeyCode.B)) {
 
+                la1.setText(word + "B");
+
+            } else if ((event.getCode() == KeyCode.C)) {
+
+                la1.setText(word + "C");
+            } else if ((event.getCode() == KeyCode.D)) {
+
+                la1.setText(word + "D");
+            } else if ((event.getCode() == KeyCode.E)) {
+
+                la1.setText(word + "E");
+            } else if ((event.getCode() == KeyCode.F)) {
+
+                la1.setText(word + "F");
+            } else if ((event.getCode() == KeyCode.G)) {
+
+                la1.setText(word + "G");
+            } else if ((event.getCode() == KeyCode.H)) {
+                la1.setText(word + "H");
+            } else if ((event.getCode() == KeyCode.I)) {
+                la1.setText(word + "I");
+            } else if ((event.getCode() == KeyCode.J)) {
+                la1.setText(word + "J");
+            } else if ((event.getCode() == KeyCode.K)) {
+                la1.setText(word + "K");
+            } else if ((event.getCode() == KeyCode.L)) {
+                la1.setText(word + "L");
+            } else if ((event.getCode() == KeyCode.M)) {
+                la1.setText(word + "M");
+            } else if ((event.getCode() == KeyCode.N)) {
+                la1.setText(word + "N");
+            } else if ((event.getCode() == KeyCode.O)) {
+                la1.setText(word + "O");
+            } else if ((event.getCode() == KeyCode.P)) {
+                la1.setText(word + "P");
+            } else if ((event.getCode() == KeyCode.Q)) {
+                la1.setText(word + "Q");
+            } else if ((event.getCode() == KeyCode.R)) {
+
+                la1.setText(word + "R");
+            } else if ((event.getCode() == KeyCode.S)) {
+
+                la1.setText(word + "S");
+            } else if ((event.getCode() == KeyCode.T)) {
+
+                la1.setText(word + "T");
+            } else if ((event.getCode() == KeyCode.U)) {
+                la1.setText(word + "U");
+            } else if ((event.getCode() == KeyCode.V)) {
+                la1.setText(word + "V");
+            } else if ((event.getCode() == KeyCode.W)) {
+                la1.setText(word + "W");
+            } else if ((event.getCode() == KeyCode.X)) {
+                la1.setText(word + "X");
+            } else if ((event.getCode() == KeyCode.Y)) {
+                la1.setText(word + "Y");
+            } else if ((event.getCode() == KeyCode.Z)) {
+                la1.setText(word + "Z");
+            }
         }
-        if (event.getCode()==KeyCode.B)
-        {
-            la1.setText("B");
-            System.out.println("CLICKED3");
+        else {
+            la2.setText("game over");
         }
     }
-
 
     @FXML
-    public void setBack(ActionEvent event) throws IOException {
-        SceneChanger setBack= new SceneChanger("GameZone.fxml",event);
+    public void setBack(ActionEvent e) throws IOException {
+        SceneChanger setBack= new SceneChanger("GameZonePanel.fxml",e);
     }
-
 }

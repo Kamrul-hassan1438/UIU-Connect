@@ -37,7 +37,7 @@ public class StudentLoginPanel {
     private Label warningLabel = new Label();
 
     @FXML
-    void backAction(ActionEvent event) throws IOException {
+    void backAction(ActionEvent event) throws IOException{
         SceneChanger back = new SceneChanger("WelcomePanel.fxml", event);
     }
 
@@ -72,15 +72,9 @@ public class StudentLoginPanel {
                     } else {
                         warningLabel.setText("Invalid ID or Password");
 
-                    }
-                    break;
-                } else {
-                    warningLabel.setText("Invalid ID or Password");
-                }
-            }
-            sc.close();
-        } catch (IOException m) {
-
-        }
-    }
+                    }}}
 }
+    catch ( IOException e){
+            e.printStackTrace();
+    }
+    }}
