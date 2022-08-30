@@ -57,7 +57,7 @@ public class StudentLoginPanel {
         try {
             String Id = institutionIDChecker.getText();
             String Pass = passwordChecker.getText();
-            Scanner sc = new Scanner(new File("src/Students_Portal.txt"));
+            Scanner sc = new Scanner(new File("Students_Portal.txt"));
             HashMap<String, String> map = new HashMap<>();
 
             while (sc.hasNext()) {
