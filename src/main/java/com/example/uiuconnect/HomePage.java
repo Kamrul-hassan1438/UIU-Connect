@@ -24,6 +24,9 @@ public class HomePage {
     private Button myProfileButton;
 
     @FXML
+    private Button YourthoughtsButton;
+
+    @FXML
     void chitchatAction(ActionEvent event) throws IOException{
         SceneChanger chitchat = new SceneChanger("ChitChatPanel.fxml", event);
     }
@@ -46,5 +49,10 @@ public class HomePage {
     @FXML
     void myProfileAction(ActionEvent event) throws IOException{
         SceneChanger myProfile = new SceneChanger("MyProfilePanel.fxml", event);
+    }
+
+    @FXML
+    void YourThoughtsAction(ActionEvent event) throws IOException{
+        SceneChanger yourthoughts = new SceneChanger("YourThoughtsPanel.fxml", event);
     }
 }

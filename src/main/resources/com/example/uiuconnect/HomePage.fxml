@@ -48,7 +48,7 @@
             </Label>
             <HBox alignment="CENTER" prefHeight="184.0" prefWidth="558.0" spacing="10.0" GridPane.rowIndex="1">
                <children>
-                  <Button fx:id="gamezoneButton1" mnemonicParsing="false" onAction="#gameZoneAction" prefHeight="110.0" prefWidth="110.0" stylesheets="@ButtonEdit1.css" text="Your Thoughts">
+                  <Button fx:id="YourthoughtsButton" mnemonicParsing="false" onAction="#YourThoughtsAction" prefHeight="110.0" prefWidth="110.0" stylesheets="@ButtonEdit1.css" text="Your Thoughts">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>

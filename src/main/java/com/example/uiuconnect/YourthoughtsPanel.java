@@ -10,6 +10,8 @@ public class YourthoughtsPanel {
     @FXML
     private Button PostButton;
 
+
+
     @FXML
     private TextArea postShow;
 
@@ -25,5 +27,6 @@ public class YourthoughtsPanel {
     void posttextFieldAction(ActionEvent event) {
 
     }
+
 
 }

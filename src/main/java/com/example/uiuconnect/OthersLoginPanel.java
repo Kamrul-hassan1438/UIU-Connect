@@ -2,6 +2,7 @@ package com.example.uiuconnect;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -53,33 +54,32 @@ public class OthersLoginPanel {
 
     @FXML
     void loginAction(ActionEvent event) throws IOException{
-        try {
-            String useremail= emailChecker.getText();
-            String Pass=passwordChecker.getText();
-            FileInputStream fileInputStream= new FileInputStream(new File("src/Others_Portal.txt"));
-            ObjectInputStream objectInputStream= new ObjectInputStream(fileInputStream);
+        String useremail= emailChecker.getText();
+        String Pass=passwordChecker.getText();
+        Scanner sc= new Scanner(new File("src/Others_Portal.txt"));
+        HashMap<String,String > map = new HashMap<>();
 
-            System.out.println(useremail);
-            while (objectInputStream.available()!=-1)
+        while (sc.hasNext())
+        {
+            String temp= sc.nextLine();
+            String [] ar=temp.split("::");
+            map.put(ar[0],ar[1]);
+            if (map.containsKey(useremail))
             {
-                My_Profile my_profile = (My_Profile)objectInputStream.readObject();
-                if (my_profile.Mail.equals(useremail) && my_profile.Password.equals(Pass)){
-                    SceneChanger home_scene = new SceneChanger("HomePage.fxml",event);
-                    break;
+                String pas;
+                pas=map.get(useremail);
+                if (Pass.equals(pas)){
+                    SceneChanger home_scene = new SceneChanger("HomePage.fxml", event);
                 }
                 else {
-                    warningLabel.setText("Invalid");
+                    warningLabel.setText("Invalid email or Password");
                 }
+                break;
             }
-            fileInputStream.close();
-            objectInputStream.close();
+            else {
+                warningLabel.setText("Invalid email or Password");
+            }
         }
-        catch (IOException m)
-        {
-
-        } catch (ClassNotFoundException ex) {
-            throw new RuntimeException(ex);
-        }
+        sc.close();
     }
-
 }

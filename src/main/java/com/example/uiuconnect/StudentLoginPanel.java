@@ -37,7 +37,7 @@ public class StudentLoginPanel {
     private Label warningLabel = new Label();
 
     @FXML
-    void backAction(ActionEvent event) throws IOException{
+    void backAction(ActionEvent event) throws IOException {
         SceneChanger back = new SceneChanger("WelcomePanel.fxml", event);
     }
 
@@ -57,25 +57,29 @@ public class StudentLoginPanel {
         try {
             String Id = institutionIDChecker.getText();
             String Pass = passwordChecker.getText();
+            Scanner sc = new Scanner(new File("src/Students_Portal.txt"));
+            HashMap<String, String> map = new HashMap<>();
 
-            FileInputStream fileInputStream = new FileInputStream(new File("src/Students_Portal.txt"));
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            System.out.println("outside");
-            while (objectInputStream.available() != -1) {
-                My_Profile my_profile = (My_Profile) objectInputStream.readObject();
-                System.out.println(my_profile.name+"   "+my_profile.Password);
-                if (my_profile.Password.equals(Pass) && my_profile.ID.equals(Id)) {
-                    System.out.println("Inside"+my_profile.name+"  "+my_profile.Password);
-                    SceneChanger home_scene = new SceneChanger("HomePage.fxml",event);
+            while (sc.hasNext()) {
+                String temp = sc.nextLine();
+                String[] ar = temp.split("::");
+                map.put(ar[0], ar[1]);
+                if (map.containsKey(Id)) {
+                    String pas;
+                    pas = map.get(Id);
+                    if (Pass.equals(pas)) {
+                        SceneChanger home_scene = new SceneChanger("HomePage.fxml", event);
+                    } else {
+                        warningLabel.setText("Invalid ID or Password");
+
+                    }
                     break;
                 } else {
-                    warningLabel.setText("Invalid");
+                    warningLabel.setText("Invalid ID or Password");
                 }
             }
-            fileInputStream.close();
-            objectInputStream.close();
-        } catch (IOException | ClassNotFoundException m) {
-            m.printStackTrace();
+            sc.close();
+        } catch (IOException m) {
 
         }
     }

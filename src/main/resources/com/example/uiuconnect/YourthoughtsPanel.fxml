@@ -12,7 +12,6 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: F6C285;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uiuconnect.YourthoughtsPanel">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="152.0" layoutY="37.0" prefHeight="194.0" prefWidth="394.0" spacing="15.0">
@@ -81,5 +80,10 @@
             </VBox>
          </children>
       </HBox>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" stylesheets="@ButtonEdit1.css" text="&lt;">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
