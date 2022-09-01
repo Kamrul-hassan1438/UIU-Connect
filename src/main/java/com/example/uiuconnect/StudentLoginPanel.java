@@ -57,16 +57,18 @@ public class StudentLoginPanel {
         try {
             String Id = institutionIDChecker.getText();
             String Pass = passwordChecker.getText();
-            Scanner sc = new Scanner(new File("Students_Portal.txt"));
+            Scanner sc = new Scanner(new File("src/Students_Portal.txt"));
             HashMap<String, String> map = new HashMap<>();
-
+            System.out.println("outside");
             while (sc.hasNext()) {
                 String temp = sc.nextLine();
+                System.out.println("Stirng="+temp);
                 String[] ar = temp.split("::");
-                map.put(ar[0], ar[1]);
+                map.put(ar[0],ar[1]);
                 if (map.containsKey(Id)) {
                     String pas;
                     pas = map.get(Id);
+                    System.out.println("insidepass");
                     if (Pass.equals(pas)) {
                         SceneChanger home_scene = new SceneChanger("HomePage.fxml", event);
                     } else {

@@ -57,7 +57,7 @@ public class OthersLoginPanel {
         try {
             String useremail = emailChecker.getText();
             String Pass = passwordChecker.getText();
-            Scanner sc = new Scanner(new File("Others_Portal.txt"));
+            Scanner sc = new Scanner(new File("src/Others_Portal.txt"));
             HashMap<String, String> map = new HashMap<>();
 
             while (sc.hasNext()) {
