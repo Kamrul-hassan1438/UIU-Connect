@@ -75,8 +75,13 @@ public class YourthoughtsPanel {
             t.start();
         }
         catch (IOException e){
-            e.printStackTrace();
+            //e.printStackTrace();
+            System.out.println("Host server");
         }
     }
 
+    @FXML
+    void backAction(ActionEvent event) throws IOException{
+        SceneChanger back = new SceneChanger("HomePage.fxml", event);
+    }
 }

@@ -80,7 +80,7 @@
             </VBox>
          </children>
       </HBox>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" stylesheets="@ButtonEdit1.css" text="&lt;">
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backAction" stylesheets="@ButtonEdit1.css" text="&lt;">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>

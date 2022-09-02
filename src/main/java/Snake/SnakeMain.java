@@ -4,6 +4,7 @@ import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.Background;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -50,8 +51,10 @@ public class SnakeMain extends Application {
                 snake.eat(food);
                 score.setText(""+snake.getLength());
                 newFood();
+                while (speed >=70){
+                    speed-=2;
+                }
 
-                //speed+=5;
             }
             else if (gameOver()){
                 root.getChildren().clear();
@@ -106,6 +109,7 @@ public class SnakeMain extends Application {
 
 
         Scene scene = new Scene(root);
+        root.setBackground(Background.fill(Color.BLUE));
 
         scene.addEventFilter(KeyEvent.KEY_PRESSED, event -> {
             if (event.getCode() == KeyCode.UP){
