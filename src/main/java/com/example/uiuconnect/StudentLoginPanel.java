@@ -16,27 +16,27 @@ import java.util.Scanner;
 
 public class StudentLoginPanel {
     @FXML
-    private Button backButton = new Button();
+    private Button backButton ;
 
     @FXML
     public static  String id;
     @FXML
-    private TextField institutionIDChecker = new TextField();
+    private TextField institutionIDChecker ;
 
     @FXML
-    private Button forgotPasswordButton = new Button();
+    private Button forgotPasswordButton;
 
     @FXML
-    private Button helpButton = new Button();
+    private Button helpButton;
 
     @FXML
-    private Button loginButton = new Button();
+    private Button loginButton;
 
     @FXML
-    private PasswordField passwordChecker = new PasswordField();
+    private PasswordField passwordChecker;
 
     @FXML
-    private Label warningLabel = new Label();
+    private Label warningLabel;
 
     @FXML
     void backAction(ActionEvent event) throws IOException{
@@ -55,7 +55,7 @@ public class StudentLoginPanel {
     }
 
     @FXML
-    void loginAction(ActionEvent event) throws IOException {
+    void loginAction(ActionEvent event) throws IOException{
         try {
             String Id = institutionIDChecker.getText();
             String Pass = passwordChecker.getText();
@@ -70,11 +70,19 @@ public class StudentLoginPanel {
                     pas = map.get(Id);
                     if (Pass.equals(pas)) {
                         id=Id;
-                        SceneChanger home_scene=new SceneChanger("HomePage.fxml",event);
+                        try {
+                            SceneChanger home_scene = new SceneChanger("HomePage.fxml", event);
+                        }
+                        catch (IOException e)
+                        {
+
+                        }
+
                     } else {
                         warningLabel.setText("Invalid ID or Password");
 
                     }}}
+            sc.close();
 }
     catch ( IOException e){
             e.printStackTrace();

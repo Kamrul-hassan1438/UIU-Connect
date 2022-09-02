@@ -72,6 +72,7 @@ public class SignUpPanel {
                         map.put(ar[0], ar[1]);
                         if (map.containsKey(institutionIDChecker.getText())) {
                             count=1;
+
                             }
                     }
                         if(count==0 &&passwordcreate.getText().equals(cpassword.getText()))
@@ -80,6 +81,9 @@ public class SignUpPanel {
                                     +"::"+departmentPicker.getText()+"::"+batchPicker.getText());
                             writer.close();
                             SceneChanger goBack = new SceneChanger("WelcomePanel.fxml", event);
+                        }
+                        else if(count==1) {
+                            labelAction.setText("Account Already exist");
                         }
                         else {
                             labelAction.setText("Passwords didn't match");
@@ -114,7 +118,6 @@ public class SignUpPanel {
                 }
 
                 writer.close();
-
 
             }
             catch (IOException exc) {}
