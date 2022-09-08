@@ -5,8 +5,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Scanner;
 
 public class HomePage {
     @FXML
@@ -23,6 +27,8 @@ public class HomePage {
     private Button YourthoughtsButton;
     @FXML
     private Button uiuBrowser;
+
+
 
     @FXML
     void chitchatAction(ActionEvent event) throws IOException{
@@ -46,7 +52,8 @@ public class HomePage {
 
     @FXML
     void myProfileAction(ActionEvent event) throws IOException{
-        SceneChanger myProfile = new SceneChanger("MyProfilePanel.fxml", event);
+
+        SceneChanger myProfile = new SceneChanger("MyProfilePanel.fxml",event);
     }
 
     @FXML
