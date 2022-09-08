@@ -46,39 +46,93 @@
                   <Font name="System Bold" size="36.0" />
                </font>
             </Label>
-            <HBox alignment="CENTER" prefHeight="184.0" prefWidth="558.0" spacing="10.0" GridPane.rowIndex="1">
+            <HBox alignment="CENTER" prefHeight="270.0" prefWidth="682.0" spacing="10.0" GridPane.rowIndex="1">
                <children>
-                  <Button fx:id="gamezoneButton1" mnemonicParsing="false" onAction="#gameZoneAction" prefHeight="110.0" prefWidth="110.0" stylesheets="@ButtonEdit1.css" text="Your Thoughts">
+                  <Button fx:id="YourthoughtsButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#YourThoughtsAction" prefHeight="110.0" prefWidth="110.0" stylesheets="@ButtonEdit1.css" text="Your Thoughts">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../man-thinking.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
-                  <Button fx:id="findFriendsButton" mnemonicParsing="false" onAction="#findFriendsAction" prefHeight="110.0" prefWidth="110.0" stylesheets="@ButtonEdit1.css" text="Find">
+                  <Button fx:id="findFriendsButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#findFriendsAction" prefHeight="110.0" prefWidth="110.0" stylesheets="@ButtonEdit1.css" text="Find">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="55.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../research.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
-                  <Button fx:id="chitchatButton" mnemonicParsing="false" onAction="#chitchatAction" prefHeight="110.0" prefWidth="110.0" stylesheets="@ButtonEdit1.css" text="Chit Chat">
+                  <Button fx:id="chitchatButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#chitchatAction" prefHeight="110.0" prefWidth="110.0" stylesheets="@ButtonEdit1.css" text="Chit Chat">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../chat.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
-                  <Button fx:id="gamezoneButton" mnemonicParsing="false" onAction="#gameZoneAction" prefHeight="110.0" prefWidth="110.0" stylesheets="@ButtonEdit1.css" text="Game Zone">
+                  <Button fx:id="gamezoneButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#gameZoneAction" prefHeight="110.0" prefWidth="110.0" stylesheets="@ButtonEdit1.css" text="Game Zone">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../video-console.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
-                  <Button fx:id="myProfileButton" mnemonicParsing="false" onAction="#myProfileAction" prefHeight="110.0" prefWidth="110.0" stylesheets="@ButtonEdit1.css" text="My Profile">
+                  <Button fx:id="myProfileButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#myProfileAction" prefHeight="110.0" prefWidth="110.0" stylesheets="@ButtonEdit1.css" text="My Profile">
                      <font>
                         <Font name="System Bold" size="13.0" />
-                     </font></Button>
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="64.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../user%20(2).png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
                </children>
             </HBox>
          </children>
       </GridPane>
-      <Button fx:id="logoutButton" layoutX="620.0" layoutY="456.0" mnemonicParsing="false" onAction="#logoutAction" stylesheets="@ButtonEdit1.css" text="Log Out">
+      <Button fx:id="logoutButton" layoutX="595.0" layoutY="454.0" mnemonicParsing="false" onAction="#logoutAction" stylesheets="@ButtonEdit1.css" text="Log Out">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="54.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../turn-off.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="uiuBrowser" contentDisplay="TOP" layoutX="270.0" layoutY="360.0" mnemonicParsing="false" onAction="#browserAction" prefHeight="110.0" prefWidth="165.0" stylesheets="@ButtonEdit1.css" text="UIU Browser (Beta)">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../website.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="13.0" />
          </font>
       </Button>
    </children>

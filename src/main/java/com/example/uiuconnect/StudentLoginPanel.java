@@ -53,30 +53,41 @@ public class StudentLoginPanel {
     }
 
     @FXML
-    void loginAction(ActionEvent event) {
+    public void loginAction(ActionEvent e){
         try {
             String Id = institutionIDChecker.getText();
             String Pass = passwordChecker.getText();
-            Scanner sc = new Scanner(new File("src/Students_Portal.txt"));
-            HashMap<String, String> map = new HashMap<>();
-            System.out.println("outside");
-            while (sc.hasNext()) {
-                String temp = sc.nextLine();
-                System.out.println("Stirng="+temp);
-                String[] ar = temp.split("::");
+            Scanner sc= new Scanner(new File("src/Students_Portal.txt"));
+            HashMap<String,String> map = new HashMap<>();
+
+            while (sc.hasNext())
+            {
+                String temp= sc.nextLine();
+                String [] ar=temp.split("::");
                 map.put(ar[0],ar[1]);
-                if (map.containsKey(Id)) {
+                if (map.containsKey(Id))
+                {
                     String pas;
-                    pas = map.get(Id);
-                    System.out.println("insidepass");
-                    if (Pass.equals(pas)) {
-                        SceneChanger home_scene = new SceneChanger("HomePage.fxml", event);
-                    } else {
+                    pas=map.get(Id);
+                    if (Pass.equals(pas)){
+                        SceneChanger home_scene = new SceneChanger("HomePage.fxml", e);
+                    }
+                    else {
                         warningLabel.setText("Invalid ID or Password");
 
-                    }}}
-}
-    catch ( IOException e){
-            e.printStackTrace();
+                    }
+                    break;
+                }
+                else {
+                    warningLabel.setText("Invalid ID or Password");
+                }
+            }
+            sc.close();
+        }
+        catch (IOException m)
+        {
+
+        }
+
     }
-    }}
+   }
