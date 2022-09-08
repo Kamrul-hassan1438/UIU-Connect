@@ -30,6 +30,7 @@ public class HomePage {
 
 
 
+
     @FXML
     void chitchatAction(ActionEvent event) throws IOException{
         SceneChanger chitchat = new SceneChanger("ChitChatPanel.fxml", event);
