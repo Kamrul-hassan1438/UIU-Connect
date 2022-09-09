@@ -27,7 +27,7 @@ public class GameZonePanel {
 
     @FXML
     void hangmanGameAction(ActionEvent event) throws IOException{
-        SceneChanger exit = new SceneChanger("Hangman.fxml", event);
+        SceneChanger exit = new SceneChanger("Hang_s.fxml", event);
     }
 
     @FXML
