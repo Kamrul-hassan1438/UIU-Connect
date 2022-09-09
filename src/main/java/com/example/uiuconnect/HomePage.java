@@ -68,8 +68,6 @@ public class HomePage {
 
     @FXML
     void browserAction(ActionEvent event) throws IOException{
-        System.out.println("hello");
         SceneChanger browserOpen = new SceneChanger("WebViewPanel.fxml", event);
-        System.out.println("hello");
     }
 }
