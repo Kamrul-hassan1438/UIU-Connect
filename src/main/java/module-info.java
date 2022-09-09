@@ -1,6 +1,7 @@
 module com.example.uiuconnect {
     requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.web;
 
 
     opens com.example.uiuconnect to javafx.fxml;

@@ -16,27 +16,25 @@ import java.util.Scanner;
 
 public class StudentLoginPanel {
     @FXML
-    private Button backButton ;
+    private Button backButton = new Button();
 
     @FXML
-    public static  String id;
-    @FXML
-    private TextField institutionIDChecker ;
+    private TextField institutionIDChecker = new TextField();
 
     @FXML
-    private Button forgotPasswordButton;
+    private Button forgotPasswordButton = new Button();
 
     @FXML
-    private Button helpButton;
+    private Button helpButton = new Button();
 
     @FXML
-    private Button loginButton;
+    private Button loginButton = new Button();
 
     @FXML
-    private PasswordField passwordChecker;
+    private PasswordField passwordChecker = new PasswordField();
 
     @FXML
-    private Label warningLabel;
+    private Label warningLabel = new Label();
 
     @FXML
     void backAction(ActionEvent event) throws IOException{
@@ -55,37 +53,41 @@ public class StudentLoginPanel {
     }
 
     @FXML
-    void loginAction(ActionEvent event) throws IOException{
+    public void loginAction(ActionEvent e){
         try {
             String Id = institutionIDChecker.getText();
             String Pass = passwordChecker.getText();
-            Scanner sc = new Scanner(new File("src/Students_Portal.txt"));
-            HashMap<String, String> map = new HashMap<>();
-            while (sc.hasNext()) {
-                String temp = sc.nextLine();
-                String[] ar = temp.split("::");
+            Scanner sc= new Scanner(new File("src/Students_Portal.txt"));
+            HashMap<String,String> map = new HashMap<>();
+
+            while (sc.hasNext())
+            {
+                String temp= sc.nextLine();
+                String [] ar=temp.split("::");
                 map.put(ar[0],ar[1]);
-                if (map.containsKey(Id)) {
+                if (map.containsKey(Id))
+                {
                     String pas;
-                    pas = map.get(Id);
-                    if (Pass.equals(pas)) {
-                        id=Id;
-                        try {
-                            SceneChanger home_scene = new SceneChanger("HomePage.fxml", event);
-                        }
-                        catch (IOException e)
-                        {
-
-                        }
-
-                    } else {
+                    pas=map.get(Id);
+                    if (Pass.equals(pas)){
+                        SceneChanger home_scene = new SceneChanger("HomePage.fxml", e);
+                    }
+                    else {
                         warningLabel.setText("Invalid ID or Password");
 
-                    }}}
+                    }
+                    break;
+                }
+                else {
+                    warningLabel.setText("Invalid ID or Password");
+                }
+            }
             sc.close();
-}
-    catch ( IOException e){
-            e.printStackTrace();
+        }
+        catch (IOException m)
+        {
+
+        }
+
     }
-    }
-}
+   }

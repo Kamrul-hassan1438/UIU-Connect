@@ -2,6 +2,7 @@ package com.example.uiuconnect;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -14,21 +15,18 @@ import java.util.Scanner;
 public class HomePage {
     @FXML
     private Button chitchatButton;
-
     @FXML
     private Button findFriendsButton;
-
     @FXML
     private Button gamezoneButton;
-
     @FXML
     private Button logoutButton;
-
     @FXML
     private Button myProfileButton;
-
     @FXML
     private Button YourthoughtsButton;
+    @FXML
+    private Button uiuBrowser;
 
 
 
@@ -65,5 +63,12 @@ public class HomePage {
     @FXML
     void Your_Thougths(ActionEvent event) throws IOException {
         SceneChanger myProfile = new SceneChanger("YourthoughtsPanel.fxml", event);
+    }
+
+    @FXML
+    void browserAction(ActionEvent event) throws IOException{
+        System.out.println("hello");
+        SceneChanger browserOpen = new SceneChanger("WebViewPanel.fxml", event);
+        System.out.println("hello");
     }
 }
