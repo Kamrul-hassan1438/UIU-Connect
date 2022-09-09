@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uiuconnect.HangS">
+    <children>
+        <TextField fx:id="guess" layoutX="333.0" layoutY="76.0" />
+        <Text layoutX="333.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text Input" />
+        <Button layoutX="333.0" layoutY="114.0" mnemonicParsing="false" onAction="#getTextInput" text="Enter" />
+        <Text fx:id="textForWord" layoutX="319.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input a word" wrappingWidth="149.0">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Text>
+        <Text fx:id="hangmanTextArea" layoutX="49.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <font>
+                <Font name="Monospaced Regular" size="32.0" />
+            </font>
+        </Text>
+        <Text fx:id="endOfGameText" layoutX="264.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0">
+            <font>
+                <Font size="39.0" />
+            </font>
+        </Text>
+        <Button layoutX="523.0" layoutY="355.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
+        <Button fx:id="Back" layoutX="14.0" layoutY="368.0" mnemonicParsing="false" onAction="#GoingBack" text="Back" />
+    </children>
+</AnchorPane>
