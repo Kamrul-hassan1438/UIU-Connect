@@ -16,10 +16,10 @@ import java.util.Scanner;
 
 public class StudentLoginPanel {
     @FXML
+    public static  String id;
+    @FXML
     private Button backButton = new Button();
 
-    @FXML
-    public static  String id;
     @FXML
     private TextField institutionIDChecker = new TextField();
 
@@ -55,28 +55,42 @@ public class StudentLoginPanel {
     }
 
     @FXML
-    void loginAction(ActionEvent event) throws IOException {
+    void loginAction(ActionEvent event) {
         try {
             String Id = institutionIDChecker.getText();
             String Pass = passwordChecker.getText();
-            Scanner sc = new Scanner(new File("src/Students_Portal.txt"));
-            HashMap<String, String> map = new HashMap<>();
+            String pas;
+            Scanner sc =new Scanner(new File("src/Students_Portal.txt"));
+            HashMap<String,String> map = new HashMap<>();
             while (sc.hasNext()) {
                 String temp = sc.nextLine();
                 String[] ar = temp.split("::");
                 map.put(ar[0],ar[1]);
                 if (map.containsKey(Id)) {
-                    String pas;
                     pas = map.get(Id);
-                    if (Pass.equals(pas)) {
+                    if (Pass.equals(pas)){
                         id=Id;
-                        SceneChanger home_scene=new SceneChanger("HomePage.fxml",event);
-                    } else {
-                        warningLabel.setText("Invalid ID or Password");
+                        try {
+                            SceneChanger home_scene =new SceneChanger("HomePage.fxml", event);
+                        }
+                        catch (IOException e)
+                        {
+                          e.printStackTrace();
+                        }
+                    }
+                    else {
+                        warningLabel.setText("Invalid Password");
 
-                    }}}
+                    }
+                }
+                else {
+                    warningLabel.setText("Invalid ID" );
+                }
+            }
+            sc.close();
 }
     catch ( IOException e){
+        System.out.println("error");
             e.printStackTrace();
     }
     }
