@@ -61,10 +61,6 @@ public class HomePage {
     void YourThoughtsAction(ActionEvent event) throws IOException{
         SceneChanger yourthoughts = new SceneChanger("YourThoughtsPanel.fxml", event);
     }
-    @FXML
-    void Your_Thougths(ActionEvent event) throws IOException {
-        SceneChanger myProfile = new SceneChanger("YourthoughtsPanel.fxml", event);
-    }
 
     @FXML
     void browserAction(ActionEvent event) throws IOException{
