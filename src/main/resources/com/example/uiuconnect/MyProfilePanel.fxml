@@ -17,15 +17,22 @@
                 <Image url="@../../../MainLogo.png" />
             </image>
         </ImageView>
-        <Label layoutX="14.0" layoutY="55.0" text="My Profile" textAlignment="CENTER">
+        <Label layoutX="212.0" layoutY="44.0" text="My Profile" textAlignment="CENTER">
             <font>
                 <Font name="System Bold" size="36.0" />
             </font>
         </Label>
-        <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonAction" stylesheets="@ButtonEdit1.css" text="&lt;">
+        <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="30.0" prefWidth="30.0" stylesheets="@ButtonEdit1.css">
             <font>
                 <Font name="System Bold" size="13.0" />
             </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../caret-left-free-icon-font.png" />
+               </image>
+            </ImageView>
+         </graphic>
         </Button>
         <GridPane alignment="CENTER" layoutX="28.0" layoutY="121.0" vgap="5.0">
             <columnConstraints>
@@ -134,7 +141,7 @@
             </Label>
             </children>
         </GridPane>
-        <Button fx:id="editMyProfileButton" layoutX="76.0" layoutY="344.0" mnemonicParsing="false" stylesheets="@ButtonEdit1.css" text="Edit My Profile">
+        <Button fx:id="editMyProfileButton" layoutX="241.0" layoutY="343.0" mnemonicParsing="false" stylesheets="@ButtonEdit1.css" text="Edit My Profile">
             <font>
                 <Font name="System Bold" size="14.0" />
             </font>

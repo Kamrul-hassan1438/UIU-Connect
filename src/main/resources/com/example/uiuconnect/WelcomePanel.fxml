@@ -5,6 +5,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uiuconnect.WelcomePanel">
    <children>
@@ -17,9 +18,39 @@
             </ImageView>
             <VBox alignment="CENTER" layoutY="250.0" prefHeight="200.0" prefWidth="200.0" spacing="10.0">
                <children>
-                  <Button fx:id="loginAsStudentButton" mnemonicParsing="false" onAction="#studentLogin" prefHeight="50.0" prefWidth="190.0" stylesheets="@ButtonEdit1.css" text="Login as Student" />
-                  <Button fx:id="loginAsOthersButton" mnemonicParsing="false" onAction="#othersLogin" prefHeight="50.0" prefWidth="190.0" stylesheets="@ButtonEdit1.css" text="Login as Others" />
-                  <Button fx:id="signUpButton" mnemonicParsing="false" onAction="#accountSignUp" prefHeight="50.0" prefWidth="190.0" stylesheets="@ButtonEdit1.css" text="Sign Up" />
+                  <Button fx:id="loginAsStudentButton" mnemonicParsing="false" onAction="#studentLogin" prefHeight="50.0" prefWidth="190.0" stylesheets="@ButtonEdit1.css" text="Login as Student">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../student-with-graduation-cap.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="loginAsOthersButton" mnemonicParsing="false" onAction="#othersLogin" prefHeight="50.0" prefWidth="190.0" stylesheets="@ButtonEdit1.css" text="Login as Others">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../businessman.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="signUpButton" mnemonicParsing="false" onAction="#accountSignUp" prefHeight="50.0" prefWidth="190.0" stylesheets="@ButtonEdit1.css" text="Sign Up">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../new-user.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
                </children>
             </VBox>
          </children>
