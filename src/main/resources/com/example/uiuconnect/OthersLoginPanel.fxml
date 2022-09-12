@@ -15,7 +15,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uiuconnect.OthersLoginPanel">
    <children>
       <SplitPane dividerPositions="0.3" prefHeight="506.0" prefWidth="705.0">
@@ -56,10 +55,17 @@
                         </Label>
                      </children>
                   </VBox>
-                  <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#backAction" prefHeight="30.0" prefWidth="30.0" stylesheets="@ButtonEdit1.css" text="&lt;" textFill="WHITE">
+                  <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#backAction" prefHeight="30.0" prefWidth="30.0" stylesheets="@ButtonEdit1.css" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../caret-left-free-icon-font.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                </children>
             </AnchorPane>
@@ -103,16 +109,23 @@
                         </Button>
                      </children>
                   </HBox>
-                  <Button fx:id="helpButton" layoutX="441.0" layoutY="453.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#helpAction" prefHeight="30.0" prefWidth="30.0" stylesheets="@ButtonEdit1.css" text="?">
+                  <Button fx:id="helpButton" layoutX="441.0" layoutY="453.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#helpAction" prefHeight="30.0" prefWidth="30.0" stylesheets="@ButtonEdit1.css">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../interrogation-free-icon-font.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                   <HBox layoutX="121.0" layoutY="143.0" prefHeight="47.0" prefWidth="206.0">
                      <children>
-                        <ImageView fitHeight="48.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../user.png" />
+                              <Image url="@../../../businessman.png" />
                            </image>
                         </ImageView>
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="47.0" prefWidth="219.0" text="Login as Others">
