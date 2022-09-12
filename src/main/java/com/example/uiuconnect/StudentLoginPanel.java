@@ -59,39 +59,37 @@ public class StudentLoginPanel {
         try {
             String Id = institutionIDChecker.getText();
             String Pass = passwordChecker.getText();
-            String pas;
-            Scanner sc =new Scanner(new File("src/Students_Portal.txt"));
+            Scanner sc= new Scanner(new File("src/Students_Portal.txt"));
             HashMap<String,String> map = new HashMap<>();
-            while (sc.hasNext()) {
-                String temp = sc.nextLine();
-                String[] ar = temp.split("::");
+
+            while (sc.hasNext())
+            {
+                String temp= sc.nextLine();
+                String [] ar=temp.split("::");
                 map.put(ar[0],ar[1]);
-                if (map.containsKey(Id)) {
-                    pas = map.get(Id);
+                if (map.containsKey(Id))
+                {
+                    String pas;
+                    pas=map.get(Id);
                     if (Pass.equals(pas)){
-                        id=Id;
-                        try {
-                            SceneChanger home_scene =new SceneChanger("HomePage.fxml", event);
-                        }
-                        catch (IOException e)
-                        {
-                          e.printStackTrace();
-                        }
+                        SceneChanger home_scene = new SceneChanger("HomePage.fxml", event);
                     }
                     else {
-                        warningLabel.setText("Invalid Password");
+                        warningLabel.setText("Invalid ID or Password");
 
                     }
+                    break;
                 }
                 else {
-                    warningLabel.setText("Invalid ID" );
+                    warningLabel.setText("Invalid ID or Password");
                 }
             }
             sc.close();
+        }
+        catch (IOException m)
+        {
+
+        }
+
 }
-    catch ( IOException e){
-        System.out.println("error");
-            e.printStackTrace();
-    }
-    }
 }
