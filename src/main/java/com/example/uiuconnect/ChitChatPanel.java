@@ -21,6 +21,9 @@ public class ChitChatPanel {
     private Button SendButton;
 
     @FXML
+    private Button activeButton;
+
+    @FXML
     private TextArea all_text;
 
     @FXML
@@ -108,6 +111,11 @@ public class ChitChatPanel {
     @FXML
     void backButtonAction(ActionEvent event) throws IOException {
         SceneChanger back = new SceneChanger("HomePage.fxml", event);
+    }
+
+    @FXML
+    void activeAction(ActionEvent event) {
+
     }
 
 

@@ -39,6 +39,8 @@ public class MyProfilePanel {
 
     @FXML
     private Label phone;
+    @FXML
+    private Button editButton;
 
     @FXML
     void get_Info(ActionEvent event) throws FileNotFoundException {
@@ -66,5 +68,11 @@ public class MyProfilePanel {
     void backButtonAction(ActionEvent event) throws IOException {
         SceneChanger back = new SceneChanger("HomePage.fxml", event);
     }
+
+    @FXML
+    void editAction(ActionEvent event) throws IOException {
+        SceneChanger edit = new SceneChanger("EditMyProfile", event);
+    }
+
 
 }

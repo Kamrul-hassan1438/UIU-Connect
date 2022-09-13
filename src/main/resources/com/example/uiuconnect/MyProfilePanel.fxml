@@ -27,9 +27,9 @@
                 <Font name="System Bold" size="13.0" />
             </font>
          <graphic>
-            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="19.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../caret-left-free-icon-font.png" />
+                  <Image url="@../../../back.png" />
                </image>
             </ImageView>
          </graphic>
@@ -141,7 +141,7 @@
             </Label>
             </children>
         </GridPane>
-        <Button fx:id="editMyProfileButton" layoutX="241.0" layoutY="343.0" mnemonicParsing="false" stylesheets="@ButtonEdit1.css" text="Edit My Profile">
+        <Button fx:id="editButton" layoutX="241.0" layoutY="343.0" mnemonicParsing="false" onAction="#editAction" stylesheets="@ButtonEdit1.css" text="Edit My Profile">
             <font>
                 <Font name="System Bold" size="14.0" />
             </font>

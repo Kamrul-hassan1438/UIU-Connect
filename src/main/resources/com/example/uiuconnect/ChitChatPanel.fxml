@@ -13,9 +13,9 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: EA9E55;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uiuconnect.ChitChatPanel">
    <children>
-      <AnchorPane layoutX="14.0" prefHeight="500.0" prefWidth="200.0">
+      <AnchorPane layoutY="1.0" prefHeight="500.0" prefWidth="264.0">
          <children>
-            <VBox alignment="CENTER" layoutX="57.0" layoutY="62.0" prefHeight="98.0" prefWidth="86.0" spacing="10.0">
+            <VBox alignment="CENTER" layoutX="5.0" layoutY="65.0" prefHeight="162.0" prefWidth="242.0" spacing="10.0">
                <children>
                   <ImageView fitHeight="150.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -27,30 +27,58 @@
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Label>
+                  <Label text="Chat with your friends and enjoy ;)">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
                </children>
             </VBox>
-            <Label layoutX="46.0" layoutY="199.0" text="Active Members">
+            <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="30.0" prefWidth="30.0" stylesheets="@ButtonEdit1.css">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
-            </Label>
-            <Button fx:id="backButton" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonAction" stylesheets="@ButtonEdit1.css" text="&lt;">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <VBox alignment="CENTER" layoutX="34.0" layoutY="286.0" prefHeight="200.0" prefWidth="196.0" spacing="10.0">
+               <children>
+                  <Label fx:id="member" prefHeight="20.0" prefWidth="175.0">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Button fx:id="activeButton" layoutX="59.0" layoutY="235.0" mnemonicParsing="false" onAction="#activeAction" stylesheets="@ButtonEdit1.css" text="See Active Members">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
          </children>
       </AnchorPane>
-      <Line endX="-99.99996948242188" endY="245.39996337890625" layoutX="314.0" layoutY="127.0" startX="-100.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" />
-      <AnchorPane layoutX="219.0" layoutY="6.0" prefHeight="500.0" prefWidth="462.0">
+      <AnchorPane layoutX="257.0" layoutY="1.0" prefHeight="500.0" prefWidth="442.0">
          <children>
-            <TextField fx:id="textField" layoutX="139.0" layoutY="459.0" prefHeight="26.0" prefWidth="248.0" promptText="Text" />
-            <Button fx:id="SendButton" layoutX="396.0" layoutY="457.0" mnemonicParsing="false" onAction="#send" stylesheets="@ButtonEdit1.css" text="Send">
+            <TextField fx:id="textField" layoutX="55.0" layoutY="458.0" prefHeight="26.0" prefWidth="312.0" promptText="User&gt;&gt;Reciver&gt;&gt;Send&gt;&gt;(Your Message)" />
+            <Button fx:id="SendButton" layoutX="376.0" layoutY="456.0" minWidth="0.0" mnemonicParsing="false" onAction="#send" stylesheets="@ButtonEdit1.css">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../send.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
-            <TextArea fx:id="all_text" layoutX="139.0" layoutY="216.0" prefHeight="243.0" prefWidth="248.0" />
+            <TextArea fx:id="all_text" layoutX="55.0" layoutY="10.0" prefHeight="430.0" prefWidth="380.0" />
+            <Line endX="-99.99996948242188" endY="245.39996337890625" layoutX="119.0" layoutY="127.0" startX="-100.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" />
          </children>
       </AnchorPane>
    </children>

@@ -52,6 +52,9 @@ public class SignUpPanel {
     @FXML
     private CheckBox studentCheck;
 
+    @FXML
+    private Button backButton;
+
     private  int count=0;
     @FXML
     void signUpAction(ActionEvent event) throws IOException{
@@ -122,4 +125,11 @@ public class SignUpPanel {
 
 
         }
+
+
+    @FXML
+    void backAction(ActionEvent event) throws IOException {
+        SceneChanger back = new SceneChanger("WelcomePanel.fxml", event);
+    }
+
 }

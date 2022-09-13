@@ -55,6 +55,7 @@ public class HomePage {
     void myProfileAction(ActionEvent event) throws IOException{
 
         SceneChanger myProfile = new SceneChanger("MyProfilePanel.fxml",event);
+
     }
 
     @FXML

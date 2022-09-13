@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -10,16 +11,16 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: F6C285;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uiuconnect.HangS">
     <children>
-        <TextField fx:id="guess" layoutX="333.0" layoutY="76.0" prefHeight="25.0" prefWidth="201.0" />
-        <Text layoutX="382.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text Input">
+        <TextField fx:id="guess" layoutX="330.0" layoutY="148.0" prefHeight="25.0" prefWidth="201.0" />
+        <Text layoutX="330.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your word">
          <font>
             <Font name="System Bold" size="20.0" />
          </font></Text>
-        <Button layoutX="402.0" layoutY="115.0" mnemonicParsing="false" onAction="#getTextInput" stylesheets="@ButtonEdit1.css" text="Enter">
+        <Button layoutX="401.0" layoutY="193.0" mnemonicParsing="false" onAction="#getTextInput" stylesheets="@ButtonEdit1.css" text="Enter">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>
-        <Text fx:id="textForWord" layoutX="333.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input a word" wrappingWidth="253.0">
+        <Text fx:id="textForWord" layoutX="304.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="253.0">
             <font>
                 <Font size="40.0" />
             </font>
@@ -29,7 +30,7 @@
                 <Font name="Monospaced Regular" size="32.0" />
             </font>
         </Text>
-        <Text fx:id="endOfGameText" layoutX="264.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0">
+        <Text fx:id="endOfGameText" layoutX="282.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="35.200000000000045">
             <font>
                 <Font size="39.0" />
             </font>
@@ -42,7 +43,7 @@
                </image>
             </ImageView>
          </graphic></Button>
-        <Button fx:id="Back" layoutX="14.0" layoutY="353.0" mnemonicParsing="false" onAction="#GoingBack" prefHeight="30.0" prefWidth="30.0" stylesheets="@ButtonEdit1.css">
+        <Button fx:id="Back" layoutX="14.0" layoutY="353.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#GoingBack" prefHeight="30.0" prefWidth="30.0" stylesheets="@ButtonEdit1.css">
          <graphic>
             <ImageView fitHeight="19.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -50,5 +51,15 @@
                </image>
             </ImageView>
          </graphic></Button>
+      <ImageView fitHeight="64.0" fitWidth="58.0" layoutX="207.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../hangman.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="282.0" layoutY="33.0" text="Hangman">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>

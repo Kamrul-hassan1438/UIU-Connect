@@ -42,7 +42,7 @@ public class WebViewPanel implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         engine = webview.getEngine();
-        String homePage = "www.uiu.ac.bd";
+        String homePage = "www.google.com";
         search.setText(homePage);
         searchAction();
     }

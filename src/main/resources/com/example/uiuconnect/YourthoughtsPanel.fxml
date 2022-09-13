@@ -80,10 +80,17 @@
             </VBox>
          </children>
       </HBox>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backAction" stylesheets="@ButtonEdit1.css" text="&lt;">
+      <Button layoutX="14.0" layoutY="14.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#backAction" prefHeight="30.0" prefWidth="30.0" stylesheets="@ButtonEdit1.css">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../back.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
    </children>
 </AnchorPane>
