@@ -123,23 +123,28 @@ public class HangS implements Initializable {
         ArrayList<Integer> positions = new ArrayList<>();
         char[] wordChars = word.toCharArray();
         char letterGuess = guess.charAt(0);
+        String f ;
 
-        if(word.contains(guess) && word.equals(guess)){
-            endOfGameText.setText("You won!!");
-        }
 
-        else if(word.contains(guess)){
+        if(word.contains(guess)){
+            if(M_Word.equals(guess)){
+                endOfGameText.setText("You won!!");
 
-            for (int i = 0; i < word.length(); i++) {
-                if (wordChars[i] == letterGuess) {
-                    positions.add(i);
-                }
+
             }
-            positions.forEach(pos -> {
-                secretWord.setCharAt(pos, letterGuess);
-            });
+            else {
+                for (int i = 0; i < word.length(); i++) {
+                    if (wordChars[i] == letterGuess) {
+                        positions.add(i);
 
-            textForWord.setText(String.valueOf(secretWord));
+                    }
+                }
+                positions.forEach(pos -> {
+                    secretWord.setCharAt(pos, letterGuess);
+                });
+
+                textForWord.setText(String.valueOf(secretWord));
+            }
 
         } else {
             hangmanTextArea.setText(hangManLives.get(++livesPos));

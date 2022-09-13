@@ -44,8 +44,8 @@
       <Line endX="-99.99996948242188" endY="245.39996337890625" layoutX="314.0" layoutY="127.0" startX="-100.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" />
       <AnchorPane layoutX="219.0" layoutY="6.0" prefHeight="500.0" prefWidth="462.0">
          <children>
-            <TextField fx:id="message" layoutX="139.0" layoutY="459.0" prefHeight="26.0" prefWidth="248.0" promptText="Text" />
-            <Button fx:id="SendButton" layoutX="396.0" layoutY="457.0" mnemonicParsing="false" onAction="#sendButtonAction" stylesheets="@ButtonEdit1.css" text="Send">
+            <TextField fx:id="textField" layoutX="139.0" layoutY="459.0" prefHeight="26.0" prefWidth="248.0" promptText="Text" />
+            <Button fx:id="SendButton" layoutX="396.0" layoutY="457.0" mnemonicParsing="false" onAction="#send" stylesheets="@ButtonEdit1.css" text="Send">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>

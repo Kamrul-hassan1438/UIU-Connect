@@ -28,7 +28,7 @@ public class ReaderWriterServer implements Runnable {
             System.out.println(actualMessage);
             if (actualMessage.toLowerCase().contains("list")) {
                 System.out.println("List asked.." + actualMessage);
-                String words[] = actualMessage.split("\\$");
+                String words[] = actualMessage.split(">>");
                 /*
                 words[0] = Sender Name
                 words[1] = Receiver Name
@@ -53,7 +53,7 @@ public class ReaderWriterServer implements Runnable {
                 //data.message=messageToSend;
             }
             if (actualMessage.toLowerCase().contains("ip")){
-                String words[] = actualMessage.split("\\$");
+                String words[] = actualMessage.split(">>");
                 /*
                 words[0] = Sender Name
                 words[1] = Receiver Name
@@ -70,7 +70,7 @@ public class ReaderWriterServer implements Runnable {
                 info.netConnection.write(msgToSend);
             }
             if (actualMessage.toLowerCase().contains("send")){
-                String words[] = actualMessage.split("\\$");
+                String words[] = actualMessage.split(">>");
                 /*
                 words[0] = Sender Name
                 words[1] = Receiver Name
