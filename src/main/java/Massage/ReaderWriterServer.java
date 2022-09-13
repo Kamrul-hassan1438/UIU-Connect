@@ -1,4 +1,4 @@
-package Massage.massage;
+package Massage;
 
 import java.util.HashMap;
 import java.util.Map;

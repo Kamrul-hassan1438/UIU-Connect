@@ -72,6 +72,7 @@ public class StudentLoginPanel {
                     String pas;
                     pas=map.get(Id);
                     if (Pass.equals(pas)){
+                        Id=id;
                         SceneChanger home_scene = new SceneChanger("HomePage.fxml", event);
                     }
                     else {

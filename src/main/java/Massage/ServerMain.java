@@ -1,4 +1,4 @@
-package Massage.massage;
+package Massage;
 
 import java.io.IOException;
 import java.net.InetAddress;

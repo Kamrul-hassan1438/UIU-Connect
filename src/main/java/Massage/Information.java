@@ -1,4 +1,4 @@
-package Massage.massage;
+package Massage;
 
 public class Information {
     public String username;

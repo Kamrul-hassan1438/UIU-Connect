@@ -1,4 +1,4 @@
-package Massage.massage;
+package Massage;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -15,7 +15,7 @@ public class NetworkConnection {
         ois=new ObjectInputStream(socket.getInputStream());
     }
 
-    public NetworkConnection(String ip,int port) throws IOException{
+    public NetworkConnection(String ip, int port) throws IOException{
         socket=new Socket(ip, port);
         oos=new ObjectOutputStream(socket.getOutputStream());
         ois=new ObjectInputStream(socket.getInputStream());

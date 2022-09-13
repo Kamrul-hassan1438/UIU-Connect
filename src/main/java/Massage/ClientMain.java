@@ -1,4 +1,4 @@
-package Massage.massage;
+package Massage;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -6,6 +6,7 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class ClientMain {
+
     public static void main(String[] args) throws IOException {
 
         Socket socket = new Socket();

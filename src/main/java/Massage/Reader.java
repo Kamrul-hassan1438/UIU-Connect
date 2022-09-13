@@ -1,4 +1,4 @@
-package Massage.massage;
+package Massage;
 
 public class Reader implements Runnable{
     public NetworkConnection netConnection;
