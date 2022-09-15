@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: F6C285;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uiuconnect.SignUpPanel">
+<AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: F6C285;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uiuconnect.EditMyProfile">
     <children>
         <HBox layoutX="201.0" layoutY="14.0" prefHeight="26.0" prefWidth="298.0">
             <children>
@@ -49,9 +49,9 @@
                         <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <TextField fx:id="namepicker" promptText="Name" />
-                        <TextField fx:id="emailPicker" promptText="email" GridPane.columnIndex="1" />
-                        <TextField fx:id="pnPicker" prefHeight="16.0" prefWidth="289.0" promptText="Phone Number" GridPane.rowIndex="1" />
+                        <TextField fx:id="editnamepicker" promptText="Name" />
+                        <TextField fx:id="editemailPicker" promptText="email" GridPane.columnIndex="1" />
+                        <TextField fx:id="editpnPicker" prefHeight="16.0" prefWidth="289.0" promptText="Phone Number" GridPane.rowIndex="1" />
                         <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                             <children>
                                 <DatePicker fx:id="dobPicker" prefHeight="25.0" prefWidth="125.0" promptText="Date of Birth" />
@@ -103,11 +103,11 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <TextField fx:id="departmentPicker" promptText="Depaerment" />
-                        <TextField fx:id="batchPicker" promptText="Batch(If you are a student)" GridPane.columnIndex="1" />
-                        <TextField fx:id="institutionIDChecker" promptText="Institution ID" GridPane.rowIndex="1" />
-                        <PasswordField fx:id="passwordcreate" promptText="Password" GridPane.rowIndex="2" />
-                        <PasswordField fx:id="cpassword" promptText="Confirm Password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="editdepartmentPicker" promptText="Department" />
+                        <TextField fx:id="editbatchPicker" promptText="Batch(If you are a student)" GridPane.columnIndex="1" />
+                        <TextField fx:id="editinstitutionIDChecker" promptText="Institution ID" GridPane.rowIndex="1" />
+                        <PasswordField fx:id="editpasswordcreate" promptText="Password" GridPane.rowIndex="2" />
+                        <PasswordField fx:id="editcpassword" promptText="Confirm Password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                     </children>
                 </GridPane>
             </children>
@@ -117,11 +117,7 @@
                 <Font name="System Bold" size="14.0" />
             </font>
         </Label>
-        <Button fx:id="signUpclick" layoutX="247.0" layoutY="446.0" mnemonicParsing="false" onAction="#signUpAction" prefHeight="40.0" prefWidth="206.0" stylesheets="@ButtonEdit1.css" text="Update your account">
-            <font>
-                <Font name="System Bold" size="18.0" />
-            </font></Button>
-      <Button layoutX="14.0" layoutY="14.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" stylesheets="@ButtonEdit1.css">
+      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#backAction" prefHeight="30.0" prefWidth="30.0" stylesheets="@ButtonEdit1.css">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -133,5 +129,9 @@
             </ImageView>
          </graphic>
       </Button>
+        <Button fx:id="updateButton" layoutX="247.0" layoutY="446.0" mnemonicParsing="false" onAction="#UpdateAction" prefHeight="40.0" prefWidth="206.0" stylesheets="@ButtonEdit1.css" text="Update your account">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font></Button>
     </children>
 </AnchorPane>

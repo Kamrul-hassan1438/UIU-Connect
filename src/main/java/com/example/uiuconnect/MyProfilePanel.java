@@ -71,7 +71,7 @@ public class MyProfilePanel {
 
     @FXML
     void editAction(ActionEvent event) throws IOException {
-        SceneChanger edit = new SceneChanger("EditMyProfile", event);
+        SceneChanger edit = new SceneChanger("EditMyProfile.fxml", event);
     }
 
 
