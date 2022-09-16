@@ -8,6 +8,7 @@ import javafx.scene.control.TextField;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class YourthoughtsPanel {
     @FXML
@@ -24,6 +25,7 @@ public class YourthoughtsPanel {
 
     private BufferedWriter writer;
     private BufferedReader reader;
+    String temp;
     @FXML
     void PostButtonAction(ActionEvent event) {
         try {
@@ -45,9 +47,10 @@ public class YourthoughtsPanel {
 
 
     public YourthoughtsPanel(){
-        String myName = "011212133";
+
         try {
-            Socket socket = new Socket("127.0.0.1", 5000);
+            String myName = StudentLoginPanel.id;
+            Socket socket = new Socket("127.0.0.1", 5002);
 
             OutputStreamWriter o = new OutputStreamWriter(socket.getOutputStream());
             writer = new BufferedWriter(o);
@@ -55,13 +58,32 @@ public class YourthoughtsPanel {
             InputStreamReader isr = new InputStreamReader(socket.getInputStream());
             reader = new BufferedReader(isr);
 
-            writer.write(myName + "\n");
+            writer.write(myName +"\n");
             writer.flush();
+            Thread t1 = new Thread() {
+                public void run() {
+                    try {
+                        Scanner sc= new Scanner(new FileReader("src/data.txt"));
+                        while (sc.hasNext())
+                        {
+                            temp+=sc.nextLine()+"\n";
+                        }
+                        sc.close();
+                    }
+                    catch (IOException e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
+            };
+            t1.start();
+            t1.join();
+
 
             Thread t = new Thread(){
                 public void run(){
                     try{
-                        String line = reader.readLine() + "\n";
+                        String line = temp+"\n"+reader.readLine() + "\n";
                         while (line != null){
                             postShow.appendText(line);
                             line = reader.readLine() + "\n";
@@ -74,7 +96,7 @@ public class YourthoughtsPanel {
             };
             t.start();
         }
-        catch (IOException e){
+        catch (IOException | InterruptedException e){
             //e.printStackTrace();
             System.out.println("Host server");
         }

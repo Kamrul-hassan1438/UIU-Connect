@@ -9,8 +9,9 @@ public class Client implements  Runnable {
     private BufferedReader reader;
     ArrayList<Client> clients;
     String client_Name;
+    private  BufferedWriter bufferedWriter= new BufferedWriter(new FileWriter("src/data.txt",true));
 
-    public Client(Socket socket,ArrayList<Client> clients) {
+    public Client(Socket socket,ArrayList<Client> clients) throws IOException {
         try {
             OutputStreamWriter  osr= new OutputStreamWriter(socket.getOutputStream());
             writer= new BufferedWriter(osr);
@@ -30,7 +31,7 @@ public class Client implements  Runnable {
     public void run() {
         try {
             String Client_Data= reader.readLine()+"\n";
-            Client_Data=client_Name+": "+Client_Data;
+            Client_Data=client_Name+":"+Client_Data;
             while (Client_Data!=null)
             {
                 for (Client c: clients)
@@ -39,9 +40,11 @@ public class Client implements  Runnable {
                     {
                         c.writer.write(Client_Data);
                         c.writer.flush();
+                        bufferedWriter.write(Client_Data);
+                        bufferedWriter.flush();
                     }
                 }
-                Client_Data= reader.readLine()+"\n";
+                Client_Data= client_Name+":"+reader.readLine()+"\n";
             }
         }
         catch (IOException e)  {

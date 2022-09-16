@@ -32,8 +32,12 @@ public class ChitChatPanel {
     @FXML
     private TextField textField;
 
+    @FXML
+    private Label member;
+
+    String username;
     public ChitChatPanel() {
-        String username=StudentLoginPanel.id;
+         username=StudentLoginPanel.id;
         socket = new Socket();
         try {
             socket.connect(new InetSocketAddress("www.google.com", 80));
@@ -57,7 +61,7 @@ public class ChitChatPanel {
                     if (!getMessage().equals(msg)) ;
                     {
                         setMessage(msg);
-                        System.out.println("Received : " + msg);
+                       // System.out.println("\nReceived : " + msg);
                         all_text.appendText(msg);
                         check = false;
                     }
@@ -102,6 +106,7 @@ public class ChitChatPanel {
         data.message=textField.getText();
         try{
             nc.write(data.clone());
+
         }
         catch(Exception ex){
             System.out.println("sending failed");
@@ -115,7 +120,14 @@ public class ChitChatPanel {
 
     @FXML
     void activeAction(ActionEvent event) {
+        data.message=username+">>"+username+">>list";
+        try{
+            nc.write(data.clone());
 
+        }
+        catch(Exception ex){
+            System.out.println("sending failed");
+        }
     }
 
 

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Server {
     public static void main(String[] args) {
         try {
-            ServerSocket server = new ServerSocket(5000);
+            ServerSocket server = new ServerSocket(5002);
             ArrayList<Client> clients = new ArrayList<>();
             System.out.println("Waitting");
 
