@@ -41,16 +41,16 @@
           <RowConstraints maxHeight="229.00000610351563" minHeight="10.0" prefHeight="184.20001831054688" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="54.0" prefWidth="718.0" text="Whats Next ?">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="54.0" prefWidth="718.0" text="Whats Next ?" textFill="#df6c0e">
                <font>
-                  <Font name="System Bold" size="36.0" />
+                  <Font name="Forte" size="36.0" />
                </font>
             </Label>
             <HBox alignment="CENTER" prefHeight="270.0" prefWidth="682.0" spacing="10.0" GridPane.rowIndex="1">
                <children>
                   <Button fx:id="YourthoughtsButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#YourThoughtsAction" prefHeight="110.0" prefWidth="110.0" stylesheets="@ButtonEdit1.css" text="Your Thoughts">
                      <font>
-                        <Font name="System Bold" size="13.0" />
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="15.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
@@ -62,7 +62,7 @@
                   </Button>
                   <Button fx:id="findFriendsButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#findFriendsAction" prefHeight="110.0" prefWidth="110.0" stylesheets="@ButtonEdit1.css" text="Find">
                      <font>
-                        <Font name="System Bold" size="13.0" />
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="15.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="55.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
@@ -74,7 +74,7 @@
                   </Button>
                   <Button fx:id="chitchatButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#chitchatAction" prefHeight="110.0" prefWidth="110.0" stylesheets="@ButtonEdit1.css" text="Chit Chat">
                      <font>
-                        <Font name="System Bold" size="13.0" />
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="15.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
@@ -86,7 +86,7 @@
                   </Button>
                   <Button fx:id="gamezoneButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#gameZoneAction" prefHeight="110.0" prefWidth="110.0" stylesheets="@ButtonEdit1.css" text="Game Zone">
                      <font>
-                        <Font name="System Bold" size="13.0" />
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="15.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
@@ -98,7 +98,7 @@
                   </Button>
                   <Button fx:id="myProfileButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#myProfileAction" prefHeight="110.0" prefWidth="110.0" stylesheets="@ButtonEdit1.css" text="My Profile">
                      <font>
-                        <Font name="System Bold" size="13.0" />
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="15.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="64.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
@@ -132,7 +132,7 @@
             </ImageView>
          </graphic>
          <font>
-            <Font name="System Bold" size="13.0" />
+            <Font name="Tw Cen MT Condensed Extra Bold" size="17.0" />
          </font>
       </Button>
    </children>

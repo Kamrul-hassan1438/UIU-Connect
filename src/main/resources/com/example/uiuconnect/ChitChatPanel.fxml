@@ -15,7 +15,7 @@
    <children>
       <AnchorPane layoutY="1.0" prefHeight="500.0" prefWidth="264.0">
          <children>
-            <VBox alignment="CENTER" layoutX="5.0" layoutY="65.0" prefHeight="162.0" prefWidth="242.0" spacing="10.0">
+            <VBox alignment="CENTER" layoutX="11.0" layoutY="64.0" prefHeight="162.0" prefWidth="242.0" spacing="10.0">
                <children>
                   <ImageView fitHeight="150.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -24,17 +24,17 @@
                   </ImageView>
                   <Label text="Chit Chat">
                      <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font name="Forte" size="25.0" />
                      </font>
                   </Label>
                   <Label text="Chat with your friends and enjoy ;)">
                      <font>
-                        <Font name="System Bold" size="12.0" />
+                        <Font name="Forte" size="15.0" />
                      </font>
                   </Label>
                </children>
             </VBox>
-            <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="30.0" prefWidth="30.0" stylesheets="@ButtonEdit1.css">
+            <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: TRANSPARENT;" stylesheets="@ButtonEdit1.css">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -55,9 +55,9 @@
                   </Label>
                </children>
             </VBox>
-            <Button fx:id="activeButton" layoutX="59.0" layoutY="235.0" mnemonicParsing="false" onAction="#activeAction" stylesheets="@ButtonEdit1.css" text="See Active Members">
+            <Button fx:id="activeButton" layoutX="61.0" layoutY="235.0" mnemonicParsing="false" onAction="#activeAction" stylesheets="@ButtonEdit1.css" text="See Active Members">
                <font>
-                  <Font name="System Bold" size="14.0" />
+                  <Font name="Tw Cen MT Condensed Extra Bold" size="16.0" />
                </font>
             </Button>
          </children>

@@ -27,7 +27,7 @@
                 </ImageView>
                 <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="82.0" prefWidth="237.0" text="Edit Your Account">
                     <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font name="Forte" size="25.0" />
                     </font>
                 </Label>
             </children>
@@ -36,7 +36,7 @@
             <children>
                 <Label text="Personal Info:">
                     <font>
-                        <Font name="System Bold" size="24.0" />
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="24.0" />
                     </font>
                 </Label>
                 <GridPane hgap="10.0" prefHeight="61.0" prefWidth="587.0" vgap="10.0">
@@ -66,7 +66,7 @@
             <children>
                 <Label text="Alumni Info:">
                     <font>
-                        <Font name="System Bold" size="24.0" />
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="24.0" />
                     </font>
                 </Label>
                 <VBox prefHeight="33.0" prefWidth="603.0" spacing="10.0">
@@ -117,7 +117,7 @@
                 <Font name="System Bold" size="14.0" />
             </font>
         </Label>
-      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#backAction" prefHeight="30.0" prefWidth="30.0" stylesheets="@ButtonEdit1.css">
+      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#backAction" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: TRANSPARENT;" stylesheets="@ButtonEdit1.css">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -131,7 +131,7 @@
       </Button>
         <Button fx:id="updateButton" layoutX="247.0" layoutY="446.0" mnemonicParsing="false" onAction="#UpdateAction" prefHeight="40.0" prefWidth="206.0" stylesheets="@ButtonEdit1.css" text="Update your account">
             <font>
-                <Font name="System Bold" size="18.0" />
+                <Font name="Tw Cen MT Condensed Extra Bold" size="21.0" />
             </font></Button>
     </children>
 </AnchorPane>

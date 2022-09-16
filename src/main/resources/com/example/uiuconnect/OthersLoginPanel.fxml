@@ -35,34 +35,34 @@
                      <children>
                         <Label text="Good People">
                            <font>
-                              <Font name="System Bold" size="24.0" />
+                              <Font name="Forte" size="25.0" />
                            </font>
                         </Label>
                         <Label text="bring out">
                            <font>
-                              <Font name="System Bold" size="24.0" />
+                              <Font name="Forte" size="25.0" />
                            </font>
                         </Label>
                         <Label text="The Good">
                            <font>
-                              <Font name="System Bold" size="24.0" />
+                              <Font name="Forte" size="25.0" />
                            </font>
                         </Label>
                         <Label text="in people">
                            <font>
-                              <Font name="System Bold" size="24.0" />
+                              <Font name="Forte" size="25.0" />
                            </font>
                         </Label>
                      </children>
                   </VBox>
-                  <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#backAction" prefHeight="30.0" prefWidth="30.0" stylesheets="@ButtonEdit1.css" textFill="WHITE">
+                  <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#backAction" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: TRANSPARENT;" stylesheets="@ButtonEdit1.css" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="19.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../caret-left-free-icon-font.png" />
+                              <Image url="@../../../back.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -99,17 +99,17 @@
                      <children>
                         <Button fx:id="loginButton" mnemonicParsing="false" onAction="#loginAction" prefHeight="60.0" prefWidth="150.0" stylesheets="@ButtonEdit1.css" text="Login">
                            <font>
-                              <Font name="System Bold" size="14.0" />
+                              <Font name="Tw Cen MT Condensed Extra Bold" size="20.0" />
                            </font>
                         </Button>
                         <Button fx:id="forgotPasswordButton" mnemonicParsing="false" onAction="#forgotPasswordAction" prefHeight="60.0" prefWidth="150.0" stylesheets="@ButtonEdit1.css" text="Forgot Password">
                            <font>
-                              <Font name="System Bold" size="14.0" />
+                              <Font name="Tw Cen MT Condensed Extra Bold" size="19.0" />
                            </font>
                         </Button>
                      </children>
                   </HBox>
-                  <Button fx:id="helpButton" layoutX="441.0" layoutY="453.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#helpAction" prefHeight="30.0" prefWidth="30.0" stylesheets="@ButtonEdit1.css">
+                  <Button fx:id="helpButton" layoutX="441.0" layoutY="453.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#helpAction" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: TRANSPARENT;" stylesheets="@ButtonEdit1.css">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -130,7 +130,7 @@
                         </ImageView>
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="47.0" prefWidth="219.0" text="Login as Others">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Tw Cen MT Condensed Extra Bold" size="23.0" />
                            </font>
                         </Label>
                      </children>

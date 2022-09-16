@@ -27,7 +27,7 @@
             </ImageView>
             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="82.0" prefWidth="237.0" text="Create you new account!">
                <font>
-                  <Font name="System Bold" size="18.0" />
+                  <Font name="Forte" size="20.0" />
                </font>
             </Label>
          </children>
@@ -36,7 +36,7 @@
          <children>
             <Label text="Personal Info:">
                <font>
-                  <Font name="System Bold" size="24.0" />
+                  <Font name="Tw Cen MT Condensed Extra Bold" size="25.0" />
                </font>
             </Label>
             <GridPane hgap="10.0" prefHeight="61.0" prefWidth="587.0" vgap="10.0">
@@ -66,7 +66,7 @@
          <children>
             <Label text="Alumni Info:">
                <font>
-                  <Font name="System Bold" size="24.0" />
+                  <Font name="Tw Cen MT Condensed Extra Bold" size="25.0" />
                </font>
             </Label>
             <VBox prefHeight="33.0" prefWidth="603.0" spacing="10.0">
@@ -119,9 +119,9 @@
       </Label>
       <Button fx:id="signUpclick" layoutX="279.0" layoutY="450.0" mnemonicParsing="false" onAction="#signUpAction" prefHeight="35.0" prefWidth="142.0" stylesheets="@ButtonEdit1.css" text="Sign Up !">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="Tw Cen MT Condensed Extra Bold" size="20.0" />
          </font></Button>
-      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#backAction" prefHeight="30.0" prefWidth="30.0" stylesheets="@ButtonEdit1.css">
+      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#backAction" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: TRANSPARENT;" stylesheets="@ButtonEdit1.css">
          <graphic>
             <ImageView fitHeight="19.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                <image>

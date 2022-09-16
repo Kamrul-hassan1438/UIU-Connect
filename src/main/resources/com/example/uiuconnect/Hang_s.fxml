@@ -22,7 +22,7 @@
          </font></Button>
         <Text fx:id="textForWord" layoutX="304.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="253.0">
             <font>
-                <Font size="40.0" />
+                <Font size="30.0" />
             </font>
         </Text>
         <Text fx:id="hangmanTextArea" layoutX="49.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
@@ -30,9 +30,9 @@
                 <Font name="Monospaced Regular" size="32.0" />
             </font>
         </Text>
-        <Text fx:id="endOfGameText" layoutX="282.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="35.200000000000045">
+        <Text fx:id="endOfGameText" layoutX="178.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="253.0">
             <font>
-                <Font size="39.0" />
+                <Font size="35.0" />
             </font>
         </Text>
         <Button layoutX="549.0" layoutY="353.0" mnemonicParsing="false" onAction="#reset" prefHeight="30.0" prefWidth="30.0" stylesheets="@ButtonEdit1.css">

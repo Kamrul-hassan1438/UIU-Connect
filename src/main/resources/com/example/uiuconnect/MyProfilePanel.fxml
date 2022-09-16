@@ -17,12 +17,12 @@
                 <Image url="@../../../MainLogo.png" />
             </image>
         </ImageView>
-        <Label layoutX="212.0" layoutY="44.0" text="My Profile" textAlignment="CENTER">
+        <Label layoutX="216.0" layoutY="44.0" text="My Profile" textAlignment="CENTER">
             <font>
-                <Font name="System Bold" size="36.0" />
+                <Font name="Forte" size="35.0" />
             </font>
         </Label>
-        <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="30.0" prefWidth="30.0" stylesheets="@ButtonEdit1.css">
+        <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: TRANSPARENT;" stylesheets="@ButtonEdit1.css">
             <font>
                 <Font name="System Bold" size="13.0" />
             </font>
@@ -51,7 +51,7 @@
             <children>
                 <Label alignment="CENTER" prefHeight="18.0" prefWidth="126.0" text="Name">
                     <font>
-                        <Font name="System Bold" size="15.0" />
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="16.0" />
                     </font>
                 </Label>
                 <Label alignment="CENTER" prefHeight="27.0" prefWidth="159.0" text=":" GridPane.columnIndex="1">
@@ -66,12 +66,12 @@
                 </Label>
                 <Label alignment="CENTER" prefHeight="18.0" prefWidth="131.0" text="email Address" GridPane.rowIndex="1">
                     <font>
-                        <Font name="System Bold" size="15.0" />
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="16.0" />
                     </font>
                 </Label>
                 <Label alignment="CENTER" prefHeight="18.0" prefWidth="125.0" text="Phone Number" GridPane.rowIndex="2">
                     <font>
-                        <Font name="System Bold" size="15.0" />
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="16.0" />
                     </font>
                 </Label>
                 <Label alignment="CENTER" prefHeight="27.0" prefWidth="159.0" text=":" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -81,7 +81,7 @@
                 </Label>
                 <Label alignment="CENTER" prefHeight="18.0" prefWidth="119.0" text="Date of Birth" GridPane.rowIndex="3">
                     <font>
-                        <Font name="System Bold" size="15.0" />
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="16.0" />
                     </font>
                 </Label>
                 <Label alignment="CENTER" prefHeight="27.0" prefWidth="159.0" text=":" GridPane.columnIndex="1" GridPane.rowIndex="3">
@@ -91,7 +91,7 @@
                 </Label>
                 <Label alignment="CENTER" prefHeight="22.0" prefWidth="154.0" text="Blood Group" GridPane.rowIndex="4">
                     <font>
-                        <Font name="System Bold" size="15.0" />
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="16.0" />
                     </font>
                 </Label>
                 <Label alignment="CENTER" prefHeight="27.0" prefWidth="159.0" text=":" GridPane.columnIndex="1" GridPane.rowIndex="4">
@@ -101,7 +101,7 @@
                 </Label>
                 <Label alignment="CENTER" prefHeight="18.0" prefWidth="155.0" text="Department" GridPane.rowIndex="5">
                     <font>
-                        <Font name="System Bold" size="15.0" />
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="16.0" />
                     </font>
                 </Label>
                 <Label alignment="CENTER" prefHeight="27.0" prefWidth="159.0" text=":" GridPane.columnIndex="1" GridPane.rowIndex="5">
@@ -143,14 +143,21 @@
         </GridPane>
         <Button fx:id="editButton" layoutX="241.0" layoutY="343.0" mnemonicParsing="false" onAction="#editAction" stylesheets="@ButtonEdit1.css" text="Edit My Profile">
             <font>
-                <Font name="System Bold" size="14.0" />
+                <Font name="Tw Cen MT Condensed Extra Bold" size="17.0" />
             </font>
         </Button>
         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="448.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="load" layoutX="515.0" layoutY="26.0" mnemonicParsing="false" onAction="#get_Info" prefHeight="30.0" prefWidth="70.0" stylesheets="@ButtonEdit1.css" text="Load">
+      <Button fx:id="load" contentDisplay="TOP" layoutX="547.0" layoutY="29.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#get_Info" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: TRANSPARENT;" stylesheets="@ButtonEdit1.css">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../refresh.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
       <ImageView fx:id="img" fitHeight="196.0" fitWidth="176.0" layoutX="420.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true" />
       <Button fx:id="upload" layoutX="454.0" layoutY="321.0" mnemonicParsing="false" onAction="#get_Img" prefHeight="30.0" prefWidth="108.0" stylesheets="@ButtonEdit1.css" text="Img_Upload">

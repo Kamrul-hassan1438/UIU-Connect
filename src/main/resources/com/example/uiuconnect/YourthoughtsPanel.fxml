@@ -20,7 +20,7 @@
                <children>
                   <Label text="Share Your Thoughts">
                      <font>
-                        <Font name="System Bold" size="24.0" />
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="25.0" />
                      </font>
                   </Label>
                   <ImageView fitHeight="45.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
@@ -33,10 +33,17 @@
             <HBox alignment="CENTER" prefHeight="133.0" prefWidth="498.0" spacing="10.0">
                <children>
                   <TextField fx:id="postTextField" onAction="#posttextFieldAction" prefHeight="74.0" prefWidth="240.0" promptText="Write Your Post" />
-                  <Button fx:id="PostButton" mnemonicParsing="false" onAction="#PostButtonAction" stylesheets="@ButtonEdit1.css" text="Post">
+                  <Button fx:id="PostButton" mnemonicParsing="false" onAction="#PostButtonAction" stylesheets="@ButtonEdit1.css">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../send.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                </children>
             </HBox>
@@ -56,30 +63,6 @@
             <Line endX="-65.19998168945312" endY="1.52587890625E-5" startX="-100.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" />
          </children>
       </HBox>
-      <HBox layoutX="74.0" layoutY="267.0" prefHeight="100.0" prefWidth="550.0">
-         <children>
-            <TextArea fx:id="postShow" prefHeight="100.0" prefWidth="390.0" />
-            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="61.0" spacing="10.0">
-               <children>
-                  <Label text="React">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Label>
-                  <Label text="Reply">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Label>
-                  <Label text="Answer">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Label>
-               </children>
-            </VBox>
-         </children>
-      </HBox>
       <Button layoutX="14.0" layoutY="14.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#backAction" prefHeight="30.0" prefWidth="30.0" stylesheets="@ButtonEdit1.css">
          <font>
             <Font name="System Bold" size="13.0" />
@@ -92,5 +75,50 @@
             </ImageView>
          </graphic>
       </Button>
+      <VBox layoutX="75.0" layoutY="271.0" prefHeight="200.0" prefWidth="550.0" spacing="10.0">
+         <children>
+            <TextArea fx:id="postShow" prefHeight="142.0" prefWidth="550.0" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button fx:id="reactButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#reactButtonAction" style="-fx-background-color: TRANSPARENT;" stylesheets="@ButtonEdit1.css" text="React">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../love.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="commentButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#commentButtonAction" style="-fx-background-color: TRANSPARENT;" stylesheets="@ButtonEdit1.css" text="Comment">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../comment.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="answerButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#answerButtonAction" style="-fx-background-color: TRANSPARENT;" stylesheets="@ButtonEdit1.css" text="Answer">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../answers.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

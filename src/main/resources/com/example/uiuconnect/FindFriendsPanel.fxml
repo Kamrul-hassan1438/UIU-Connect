@@ -12,26 +12,33 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: F6C285;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uiuconnect.FindFriendsPanel">
    <children>
-      <VBox alignment="TOP_CENTER" layoutX="51.0" layoutY="14.0" prefHeight="37.0" prefWidth="498.0" spacing="10.0">
+      <VBox alignment="CENTER" layoutX="51.0" layoutY="14.0" prefHeight="37.0" prefWidth="498.0" spacing="10.0">
          <children>
             <Label text="Find your friends">
                <font>
-                  <Font name="System Bold" size="18.0" />
+                  <Font name="Forte" size="30.0" />
                </font>
             </Label>
             <HBox alignment="CENTER" prefHeight="4.0" prefWidth="566.0" spacing="10.0">
                <children>
                   <TextField prefHeight="26.0" prefWidth="240.0" promptText="Search" />
-                  <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchButtonAction" stylesheets="@ButtonEdit1.css" text="Search">
+                  <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchButtonAction" style="-fx-background-color: TRANSPARENT;" stylesheets="@ButtonEdit1.css">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../research.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                </children>
             </HBox>
          </children>
       </VBox>
-      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="30.0" prefWidth="30.0" stylesheets="@ButtonEdit1.css" textAlignment="CENTER">
+      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: TRANSPARENT;" stylesheets="@ButtonEdit1.css" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -43,7 +50,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Label layoutX="240.0" layoutY="104.0" text="Suggested Friends">
+      <Label layoutX="240.0" layoutY="112.0" text="Suggested Friends">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

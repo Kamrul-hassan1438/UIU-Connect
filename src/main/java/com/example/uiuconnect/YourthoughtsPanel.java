@@ -14,7 +14,14 @@ public class YourthoughtsPanel {
     @FXML
     private Button PostButton;
 
+    @FXML
+    private Button answerButton;
 
+    @FXML
+    private Button commentButton;
+
+    @FXML
+    private Button reactButton;
 
     @FXML
     private TextArea postShow;
@@ -100,6 +107,21 @@ public class YourthoughtsPanel {
             //e.printStackTrace();
             System.out.println("Host server");
         }
+    }
+
+    @FXML
+    void reactButtonAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void commentButtonAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void answerButtonAction(ActionEvent event) {
+
     }
 
     @FXML
