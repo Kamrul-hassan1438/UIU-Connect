@@ -17,6 +17,8 @@ import java.util.Scanner;
 
 public class OthersLoginPanel {
     @FXML
+    public static  String Mail;
+    @FXML
     private Button backButton = new Button();
 
     @FXML
@@ -68,6 +70,7 @@ public class OthersLoginPanel {
                     String pas;
                     pas = map.get(useremail);
                     if (Pass.equals(pas)) {
+                        Mail=useremail;
                         SceneChanger home_scene = new SceneChanger("HomePage.fxml", event);
                     } else {
                         warningLabel.setText("Invalid email or Password");

@@ -45,24 +45,43 @@ public class MyProfilePanel {
     @FXML
     void get_Info(ActionEvent event) throws FileNotFoundException {
         load.setVisible(false);
-        Scanner sc = new Scanner(new File("src/Students_Portal.txt"));
-        HashMap<String, String> map = new HashMap<>();
-        while (sc.hasNext()) {
-            String temp = sc.nextLine();
-            String[] ar = temp.split("::");
-            map.put(ar[0],ar[1]);
-            if (map.containsKey(StudentLoginPanel.id))
-            {
-                name.setText(ar[2]);
-                email.setText(ar[3]);
-                phone.setText(ar[4]);
-                blood.setText(ar[5]);
-                department.setText(ar[6]);
+        if (StudentLoginPanel.id!=null) {
+            Scanner sc = new Scanner(new File("src/Students_Portal.txt"));
+            HashMap<String, String> map = new HashMap<>();
+            while (sc.hasNext()) {
+                String temp = sc.nextLine();
+                String[] ar = temp.split("::");
+                map.put(ar[0], ar[1]);
+                if (map.containsKey(StudentLoginPanel.id)) {
+                    name.setText(ar[2]);
+                    email.setText(ar[3]);
+                    phone.setText(ar[4]);
+                    blood.setText(ar[5]);
+                    department.setText(ar[6]);
 
-                break;
+                    break;
+                }
             }
+            sc.close();
         }
-        sc.close();
+        else {
+            Scanner sc = new Scanner(new File("src/Others_Portal.txt"));
+            HashMap<String, String> map = new HashMap<>();
+            while (sc.hasNext()) {
+                String temp = sc.nextLine();
+                String[] ar = temp.split("::");
+                map.put(ar[0], ar[1]);
+                if (map.containsKey(OthersLoginPanel.Mail))
+                {
+                    name.setText(ar[2]);
+                    email.setText(ar[0]);
+                    phone.setText(ar[3]);
+                    blood.setText(ar[4]);
+                    break;
+                }
+            }
+            sc.close();
+        }
     }
     @FXML
     void backButtonAction(ActionEvent event) throws IOException {
