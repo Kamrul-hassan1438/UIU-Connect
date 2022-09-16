@@ -4,10 +4,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -41,6 +42,11 @@ public class MyProfilePanel {
     private Label phone;
     @FXML
     private Button editButton;
+
+    @FXML
+    private ImageView img;
+    @FXML
+    private Button upload;
 
     @FXML
     void get_Info(ActionEvent event) throws FileNotFoundException {
@@ -93,5 +99,20 @@ public class MyProfilePanel {
         SceneChanger edit = new SceneChanger("EditMyProfile.fxml", event);
     }
 
+    @FXML
+    void get_Img(ActionEvent event) throws IOException {
 
+        FileChooser fc= new FileChooser();
+        fc.setInitialDirectory(new File(System.getProperty("user.home")));
+        fc.getExtensionFilters().clear();
+        fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image Files","*png","*jpg"));
+        File file=fc.showOpenDialog(null);
+        if (file!=null)
+        {
+            img.setImage(new Image(file.toURL().toString()));
+        }
+        else {
+            System.out.println("A file Invalid");
+        }
+    }
 }

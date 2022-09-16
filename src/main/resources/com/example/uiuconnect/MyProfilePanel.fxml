@@ -152,5 +152,11 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
+      <ImageView fx:id="img" fitHeight="196.0" fitWidth="176.0" layoutX="420.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="upload" layoutX="454.0" layoutY="321.0" mnemonicParsing="false" onAction="#get_Img" prefHeight="30.0" prefWidth="108.0" stylesheets="@ButtonEdit1.css" text="Img_Upload">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>
