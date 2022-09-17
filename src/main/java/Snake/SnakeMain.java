@@ -34,7 +34,7 @@ public class SnakeMain extends Application {
 
     private void newFood(){
         food = new Circle(random.nextInt(Pane_Width-10), random.nextInt(Pane_Hight-10),Radius );
-        food.setFill(Color.RED);
+        food.setFill(Color.WHITE);
         root.getChildren().add(food);
     }
 
@@ -109,7 +109,7 @@ public class SnakeMain extends Application {
 
 
         Scene scene = new Scene(root);
-        root.setBackground(Background.fill(Color.BLUE));
+        root.setBackground(Background.fill(Color.ORANGE));
 
         scene.addEventFilter(KeyEvent.KEY_PRESSED, event -> {
             if (event.getCode() == KeyCode.UP){

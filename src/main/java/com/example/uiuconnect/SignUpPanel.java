@@ -55,6 +55,7 @@ public class SignUpPanel {
     @FXML
     private Button backButton;
 
+
     private  int count=0;
     @FXML
     void signUpAction(ActionEvent event) throws IOException{
@@ -67,7 +68,7 @@ public class SignUpPanel {
                 HashMap<String, String> map = new HashMap<>();
                 String id= institutionIDChecker.getText();
                 int a= id.length();
-                if (a==9 && emailPicker.getText()!=null && namepicker.getText()!=null && pnPicker.getText()!=null && bloodGroupPicker.getText()!=null && departmentPicker.getText()!=null && batchPicker.getText()!=null)
+                if (a==9 && emailPicker.getText()!=null && namepicker.getText()!=null && pnPicker.getText()!=null && dobPicker.getValue()!=null && bloodGroupPicker.getText()!=null && departmentPicker.getText()!=null && batchPicker.getText()!=null)
                 {
                     while (sc.hasNext()) {
                         String temp = sc.nextLine();
@@ -79,7 +80,7 @@ public class SignUpPanel {
                     }
                         if(count==0 &&passwordcreate.getText().equals(cpassword.getText()))
                         {
-                            writer.write("\n"+id+"::"+passwordcreate.getText()+"::"+namepicker.getText()+"::"+emailPicker.getText()+"::"+pnPicker.getText()+"::"+bloodGroupPicker.getText()
+                            writer.write("\n"+id+"::"+passwordcreate.getText()+"::"+namepicker.getText()+"::"+emailPicker.getText()+"::"+pnPicker.getText()+"::"+dobPicker.getValue()+"::"+bloodGroupPicker.getText()
                                     +"::"+departmentPicker.getText()+"::"+batchPicker.getText());
                             writer.close();
                             SceneChanger goBack = new SceneChanger("WelcomePanel.fxml", event);
@@ -101,11 +102,11 @@ public class SignUpPanel {
             try {
                 FileWriter fileWriter= new FileWriter("src/Others_Portal.txt",true);
                 BufferedWriter writer= new BufferedWriter(fileWriter);
-                if (emailPicker.getText()!=null && namepicker.getText()!=null && pnPicker.getText()!=null && bloodGroupPicker.getText()!=null )
+                if (emailPicker.getText()!=null && namepicker.getText()!=null && pnPicker.getText()!=null && dobPicker.getValue()!=null && bloodGroupPicker.getText()!=null )
                 {
                     if (passwordcreate.getText()!=null&&(passwordcreate.getText().equals(cpassword.getText())))
                     {
-                        writer.write("\n"+emailPicker.getText()+"::"+passwordcreate.getText()+"::"+namepicker.getText()+"::"+pnPicker.getText()+"::"+bloodGroupPicker.getText());
+                        writer.write("\n"+emailPicker.getText()+"::"+passwordcreate.getText()+"::"+namepicker.getText()+"::"+pnPicker.getText()+"::"+dobPicker.getValue()+"::"+bloodGroupPicker.getText());
                         writer.close();
                         labelAction.setText("New Account created");
                         SceneChanger goBack = new SceneChanger("WelcomePanel.fxml", event);

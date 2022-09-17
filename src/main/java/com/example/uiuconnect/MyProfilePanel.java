@@ -62,8 +62,9 @@ public class MyProfilePanel {
                     name.setText(ar[2]);
                     email.setText(ar[3]);
                     phone.setText(ar[4]);
-                    blood.setText(ar[5]);
-                    department.setText(ar[6]);
+                    dob.setText(ar[5]);
+                    blood.setText(ar[6]);
+                    department.setText(ar[7]);
 
                     break;
                 }
@@ -82,7 +83,8 @@ public class MyProfilePanel {
                     name.setText(ar[2]);
                     email.setText(ar[0]);
                     phone.setText(ar[3]);
-                    blood.setText(ar[4]);
+                    dob.setText(ar[4]);
+                    blood.setText(ar[5]);
                     break;
                 }
             }

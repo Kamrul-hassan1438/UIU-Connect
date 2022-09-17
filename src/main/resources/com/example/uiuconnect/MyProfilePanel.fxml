@@ -34,11 +34,11 @@
             </ImageView>
          </graphic>
         </Button>
-        <GridPane alignment="CENTER" layoutX="28.0" layoutY="121.0" vgap="5.0">
+        <GridPane alignment="CENTER" layoutX="28.0" layoutY="121.0" prefHeight="206.0" prefWidth="379.0" vgap="5.0">
             <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.80001220703124" minWidth="10.0" prefWidth="107.99996337890624" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="128.0" minWidth="0.0" prefWidth="17.5999755859375" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.60003662109375" minWidth="10.0" prefWidth="180.80002441406248" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.80001220703124" minWidth="10.0" prefWidth="94.4000244140625" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="128.0" minWidth="0.0" prefWidth="12.800012207031259" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="277.60002441406255" minWidth="10.0" prefWidth="271.9999877929688" />
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />

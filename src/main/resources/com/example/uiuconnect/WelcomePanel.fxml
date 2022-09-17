@@ -27,7 +27,7 @@
                         </ImageView>
                      </graphic>
                      <font>
-                        <Font name="System Bold" size="14.0" />
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="17.0" />
                      </font></Button>
                   <Button fx:id="loginAsOthersButton" mnemonicParsing="false" onAction="#othersLogin" prefHeight="50.0" prefWidth="190.0" stylesheets="@ButtonEdit1.css" text="Login as Others">
                      <graphic>
@@ -38,7 +38,7 @@
                         </ImageView>
                      </graphic>
                      <font>
-                        <Font name="System Bold" size="14.0" />
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="17.0" />
                      </font></Button>
                   <Button fx:id="signUpButton" mnemonicParsing="false" onAction="#accountSignUp" prefHeight="50.0" prefWidth="190.0" stylesheets="@ButtonEdit1.css" text="Sign Up">
                      <graphic>
@@ -49,8 +49,20 @@
                         </ImageView>
                      </graphic>
                      <font>
-                        <Font name="System Bold" size="14.0" />
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="17.0" />
                      </font></Button>
+                  <Button fx:id="aboutUsButton" mnemonicParsing="false" onAction="#AboutAction" prefHeight="50.0" prefWidth="190.0" stylesheets="@ButtonEdit1.css" text="About Us">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../group-chat%20(2).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="17.0" />
+                     </font>
+                  </Button>
                </children>
             </VBox>
          </children>

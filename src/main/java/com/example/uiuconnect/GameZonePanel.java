@@ -32,6 +32,7 @@ public class GameZonePanel {
 
     @FXML
     void snakeGameAction(ActionEvent event) {
-      //  SnakeMain snakeMain= new SnakeMain();
+        SnakeMain snakeMain= new SnakeMain();
+        snakeMain.start(new Stage());
     }
 }
