@@ -56,7 +56,14 @@ public class YourthoughtsPanel {
     public YourthoughtsPanel(){
 
         try {
-            String myName = StudentLoginPanel.id;
+            String myName ;
+            if(StudentLoginPanel.id!=null)
+            {
+                myName=StudentLoginPanel.id;
+            }
+            else {
+                myName=OthersLoginPanel.Mail;
+            }
             Socket socket = new Socket("127.0.0.1", 5002);
 
             OutputStreamWriter o = new OutputStreamWriter(socket.getOutputStream());
