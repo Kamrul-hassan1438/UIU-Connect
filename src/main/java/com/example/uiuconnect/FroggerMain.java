@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
+import javafx.scene.layout.Background;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -27,6 +28,7 @@ public class FroggerMain extends Application {
     private Parent createContent(){
         root = new Pane();
         root.setPrefSize(800, 600);
+        root.setBackground(Background.fill(Color.ORANGE));
 
         frog = initFrog();
         root.getChildren().add(frog);
@@ -83,13 +85,13 @@ public class FroggerMain extends Application {
     }
 
     private Node initFrog() {
-        Rectangle rect = new Rectangle(38, 38 , Color.GREEN);
+        Rectangle rect = new Rectangle(38, 38 , Color.WHITE);
         rect.setTranslateY(600 - 39);
 
         return rect;
     }
     private Node spawnCar(){
-        Rectangle rect = new Rectangle(38 , 38 , Color.RED);
+        Rectangle rect = new Rectangle(38 , 38 , Color.BLACK);
         double v = (int )(Math.random() * 14) *40 ;
         rect.setTranslateY(v);
         root.getChildren().add(rect);

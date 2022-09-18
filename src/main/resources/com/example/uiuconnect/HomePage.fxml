@@ -60,18 +60,6 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="findFriendsButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#findFriendsAction" prefHeight="110.0" prefWidth="110.0" stylesheets="@ButtonEdit1.css" text="Find">
-                     <font>
-                        <Font name="Tw Cen MT Condensed Extra Bold" size="15.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="55.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../research.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
                   <Button fx:id="chitchatButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#chitchatAction" prefHeight="110.0" prefWidth="110.0" stylesheets="@ButtonEdit1.css" text="Chit Chat">
                      <font>
                         <Font name="Tw Cen MT Condensed Extra Bold" size="15.0" />

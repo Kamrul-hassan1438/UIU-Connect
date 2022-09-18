@@ -15,8 +15,9 @@ import java.util.Scanner;
 public class HomePage {
     @FXML
     private Button chitchatButton;
-    @FXML
-    private Button findFriendsButton;
+
+//    @FXML
+//    private Button findFriendsButton;
     @FXML
     private Button gamezoneButton;
     @FXML
@@ -36,10 +37,10 @@ public class HomePage {
         SceneChanger chitchat = new SceneChanger("ChitChatPanel.fxml", event);
     }
 
-    @FXML
-    void findFriendsAction(ActionEvent event) throws IOException{
-        SceneChanger find = new SceneChanger("FindFriendsPanel.fxml", event);
-    }
+//    @FXML
+//    void findFriendsAction(ActionEvent event) throws IOException{
+//        SceneChanger find = new SceneChanger("FindFriendsPanel.fxml", event);
+//    }
 
     @FXML
     void gameZoneAction(ActionEvent event) throws IOException{
