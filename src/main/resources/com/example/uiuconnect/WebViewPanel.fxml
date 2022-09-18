@@ -35,12 +35,12 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button mnemonicParsing="false" onAction="#elmsaction" prefHeight="50.0" prefWidth="50.0" stylesheets="@ButtonEdit1.css" text="uCAM">
+            <Button mnemonicParsing="false" onAction="#elmsaction" prefHeight="50.0" prefWidth="50.0" stylesheets="@ButtonEdit1.css" text="eLMS">
                <font>
                   <Font name="Tw Cen MT Condensed Extra Bold" size="12.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#ucamAction" prefHeight="50.0" prefWidth="50.0" stylesheets="@ButtonEdit1.css" text="eLMS">
+            <Button mnemonicParsing="false" onAction="#ucamAction" prefHeight="50.0" prefWidth="50.0" stylesheets="@ButtonEdit1.css" text="Ucam">
                <font>
                   <Font name="Tw Cen MT Condensed Extra Bold" size="12.0" />
                </font>
