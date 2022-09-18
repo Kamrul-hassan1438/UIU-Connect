@@ -64,6 +64,7 @@ public class StudentLoginPanel {
 
             while (sc.hasNext())
             {
+                System.out.println("hello");
                 String temp= sc.nextLine();
                 String [] ar=temp.split("::");
                 map.put(ar[0],ar[1]);
