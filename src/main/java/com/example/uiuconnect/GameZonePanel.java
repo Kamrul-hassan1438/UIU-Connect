@@ -21,6 +21,9 @@ public class GameZonePanel {
     private Button snakeGameButton;
 
     @FXML
+    private Button reButton;
+
+    @FXML
     void exitButtonAction(ActionEvent event) throws IOException {
         SceneChanger exit = new SceneChanger("HomePage.fxml", event);
     }
@@ -34,5 +37,10 @@ public class GameZonePanel {
     void snakeGameAction(ActionEvent event) {
         SnakeMain snakeMain= new SnakeMain();
         snakeMain.start(new Stage());
+    }
+    @FXML
+    void reAction(ActionEvent event) throws Exception {
+        FroggerMain froggerMain = new FroggerMain();
+        froggerMain.start(new Stage());
     }
 }

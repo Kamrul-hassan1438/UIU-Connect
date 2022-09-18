@@ -75,6 +75,18 @@
                   </ImageView>
                </graphic>
             </Button>
+            <Button fx:id="reButton" contentDisplay="TOP" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#reAction" prefHeight="120.0" prefWidth="172.0" stylesheets="@ButtonEdit2.css" text="Run and Escape" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../box.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
             <Button fx:id="snakeGameButton" contentDisplay="TOP" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#snakeGameAction" prefHeight="120.0" prefWidth="120.0" stylesheets="@ButtonEdit2.css" text="Snake" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />

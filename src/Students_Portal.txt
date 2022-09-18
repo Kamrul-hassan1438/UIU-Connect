@@ -1,2 +1,3 @@
-011212133::Sakib123::Maaz Bin Hossain::mhossainsaki@gmail.com::01795859483::2002-07-06::B+::BSCSE::212
-011212153::1111::Md, Kamrul Hassan::kamrul@gmail.com::01769696969::2022-09-01::A+::BSCSE::212
+011212133::1111::Maaz Bin Hossain::mhossainsaki@gmial.com::01795859483::2002-07-06::B+::BSCSE::212
+011212153::1111::Md. Kamrul Hassan::kamrul@gmail.com::017234567890::2001-09-05::AB+::BSCSE::212
+011212167::1111::Molla Sabit::sabit@gmail.com::12345678910::2022-09-06::O+::BSCSE::212
