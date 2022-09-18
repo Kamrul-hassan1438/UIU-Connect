@@ -1,5 +1,6 @@
 package com.example.uiuconnect;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -7,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebHistory;
 import javafx.scene.web.WebView;
 
 import java.io.IOException;
@@ -28,6 +30,7 @@ public class WebViewPanel implements Initializable {
     private WebView webview;
 
     private WebEngine engine;
+    private WebHistory history;
 
     @FXML
     void backAction(ActionEvent event) throws IOException {
@@ -53,4 +56,34 @@ public class WebViewPanel implements Initializable {
 
     public void webViewAction(MouseEvent mouseEvent) {
     }
+
+    @FXML
+    void back(ActionEvent event) {
+        history = engine.getHistory();
+        ObservableList<WebHistory.Entry> entries = history.getEntries();
+        history.go(-1);
+        search.setText(entries.get(history.getCurrentIndex()).getUrl());
+    }
+    @FXML
+    void forward(ActionEvent event) {
+        history = engine.getHistory();
+        ObservableList<WebHistory.Entry> entries = history.getEntries();
+        history.go(1);
+        search.setText(entries.get(history.getCurrentIndex()).getUrl());
+    }
+    @FXML
+    void elmsaction(ActionEvent event) {
+        history = engine.getHistory();
+        ObservableList<WebHistory.Entry> entries = history.getEntries();
+        engine.executeScript("window.location = \"http://lms.uiu.ac.bd/login/index.php\";");
+        search.setText(entries.get(history.getCurrentIndex()).getUrl());
+    }
+    @FXML
+    void ucamAction(ActionEvent event) {
+        history = engine.getHistory();
+        ObservableList<WebHistory.Entry> entries = history.getEntries();
+        engine.executeScript("window.location = \"https://ucam.uiu.ac.bd/Security/Login.aspx\";");
+        search.setText(entries.get(history.getCurrentIndex()).getUrl());
+    }
+
 }
